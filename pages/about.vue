@@ -13,7 +13,7 @@ div
 export default {
   data() {
     return {
-      page: '/about',
+      page: '/about/',
       title: 'About'
     }
   },

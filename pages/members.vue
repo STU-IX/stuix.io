@@ -36,7 +36,7 @@ import m from 'static/data/members.json'
 export default {
   data() {
     return {
-      page: '/members',
+      page: '/members/',
       title: 'Members',
       members: m
     }
