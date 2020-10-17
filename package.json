@@ -1,0 +1,23 @@
+{
+  "name": "stuix-peering",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "nuxt": "^2.14.6"
+  },
+  "devDependencies": {
+    "@mdi/font": "^5.7.55",
+    "@nuxtjs/vuetify": "^1.11.2",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.0.0",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^4.1.1"
+  }
+}

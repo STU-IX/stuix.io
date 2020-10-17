@@ -1,0 +1,59 @@
+name: Release
+
+on:
+  push:
+    branches: main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+        extended: true
+    - name: Setup Node
+      uses: actions/setup-node@v2.1.0
+      with:
+        node-version: '12.x'
+    - name: Install npm packages
+      run: npm install
+    - name: Install jq
+      run: sudo apt-get install -y jq
+    - uses: actions/cache@v2
+      with:
+        path: /tmp/hugo_cache
+        key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+        restore-keys: |
+          ${{ runner.os }}-hugomod-
+    - name: Cache dependencies
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - name: Download Members File
+      run: ./download.sh
+      env:
+        FILE_URL: ${{ secrets.FILE_URL }}
+    - name: Generate Pages
+      env:
+        GO111MODULE: on
+      run: npm run generate
+    - name: Archive Production Artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: dist
+        path: dist
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        cname: stuix.io
+        publish_dir: dist
+        force_orphan: true
