@@ -1,0 +1,17 @@
+extends layout.pug
+block head
+	title STUIX - Members
+block content
+	.window
+		.title-bar
+			.title-bar-text Members
+			.title-bar-controls
+				button(aria-label='Minimize')
+				button(aria-label='Maximize')
+				button(aria-label='Close')
+		.window-body
+			// to change list, check /js/member.js
+			#members-container
+block script
+	script(src='/js/member.js')
+
