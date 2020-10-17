@@ -20,8 +20,6 @@ jobs:
       uses: actions/setup-node@v2.1.0
       with:
         node-version: '12.x'
-    - name: Install npm packages
-      run: npm install
     - name: Install jq
       run: sudo apt-get install -y jq
     - uses: actions/cache@v2
@@ -37,6 +35,8 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
+    - name: Install npm packages
+      run: npm install
     - name: Download Members File
       run: ./download.sh
       env:
