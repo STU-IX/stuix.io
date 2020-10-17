@@ -1,4 +1,4 @@
-# Official Website of STIIX
+# Official Website of STUIX
 
 ## What is an Internet Exchange?
 
