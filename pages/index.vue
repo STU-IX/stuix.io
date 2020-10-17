@@ -6,7 +6,7 @@ div
   p This is a non-profit IX (Internet Exchange)
 
   section.field-row(style='justify-content: flex-end')
-    a(href='/join')
+    a(href='/join/')
       button Join STUIX!
 </template>
 

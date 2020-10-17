@@ -56,15 +56,15 @@ export default {
         },
         {
           title: 'About',
-          to: '/about'
+          to: '/about/'
         },
         {
           title: 'Join',
-          to: '/join'
+          to: '/join/'
         },
         {
           title: 'Members',
-          to: '/members'
+          to: '/members/'
         }
       ]
     }
