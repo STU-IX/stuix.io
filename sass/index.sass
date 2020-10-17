@@ -1,0 +1,58 @@
+body,h1,h2,h3,h4,h5,h6
+    font-family:  'Times New Roman', Times,  新細明體, 'Noto Sans TC', serif
+body
+    font-size: 16px
+    background-image: url('/img/bg.jpg')
+    background-size: 256px
+#container
+    max-width: 90%
+    width: 640px
+    margin: 0 auto
+header
+    text-align: center
+    h1
+        font-size: 86px
+        background-image: linear-gradient(to left, orange , yellow, green, cyan, blue, violet)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        display: inline
+        filter: drop-shadow(-4px 4px 0px rgba(0,0,0,.8))
+    p
+        font-size: 24px
+#nav
+    text-align: center
+    a
+        padding: 6px 0
+        text-decoration: none
+        button
+            cursor: pointer
+#members-container
+    height: 500px
+    background-color: #FFF
+    margin: -8px
+    padding: 16px
+    overflow-y: scroll
+    .member
+        float: left
+        margin: 8px
+        text-decoration: none
+        .image
+            height: 128px
+            width: 128px
+            border: 1px solid #d7d4cb
+            img
+                width: 100%
+                height: 100%
+                object-fit: contain
+        .name
+            text-align: center
+            margin: 4px
+            color: #000
+.window
+    font-size: 14px
+#footer
+    text-align: center
+// 98.css fix
+button.active 
+    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px #808080
+
