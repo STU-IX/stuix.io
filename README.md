@@ -17,4 +17,4 @@ PeeringDB: (Comming Soon)
 
 Anyone who holds public resources (ASN and IPv4/IPv6) can join STUIX to gain experience with BGP and routing.
 
-To get started first fill out the request form on our (join STUIX)[https://stuix.io/join/] page
+To get started first fill out the request form on our [join STUIX](https://stuix.io/join/) page
