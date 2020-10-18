@@ -32,8 +32,8 @@ export default {
     }
   },
   mounted() {
-    this.$store.commit['updatePage', this.page]
-    this.$store.commit['updateTitle', this.title]
+    this.$store.commit('updatePage', this.page)
+    this.$store.commit('updateTitle', this.title)
     Array.from(document.querySelectorAll('form .field-row-stacked input:not([type])')).forEach(e => e.setAttribute("type", "text"))
   }
 }
