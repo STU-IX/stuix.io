@@ -1,6 +1,6 @@
 <template>
 	<div id="members-container">
-		<table class="sticky">
+		<table>
 			<thead>
 				<tr>
 					<th>AS</th>
@@ -12,8 +12,6 @@
 					<th>TG</th>
 				</tr>
 			</thead>
-		</table>
-		<table>
 			<tbody>
 				<tr v-for="(item, i) in members" :key="i">
 					<td>{{ item.ASN }}</td>
@@ -62,9 +60,6 @@ export default {
 	table
 		width: 100%
 		min-width: 600px
-		&.sticky
-			position: sticky
-			top: 0
 		td
 			padding-left: 4px
 			padding-right: 4px
@@ -74,4 +69,7 @@ export default {
 			text-align: left
 			background: silver
 			box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf
+			position: sticky
+			top: 0
+			z-index: 2
 </style>
