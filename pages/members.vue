@@ -1,6 +1,6 @@
 <template>
 	<div id="members-container">
-		<table>
+		<table class="sticky">
 			<thead>
 				<tr>
 					<th>AS</th>
@@ -12,6 +12,8 @@
 					<th>TG</th>
 				</tr>
 			</thead>
+		</table>
+		<table>
 			<tbody>
 				<tr v-for="(item, i) in members" :key="i">
 					<td>{{ item.ASN }}</td>
@@ -52,21 +54,24 @@ export default {
 
 <style lang="sass">
 #members-container
-  height: 500px
-  background-color: #FFF
-  margin: -8px
-  overflow-y: scroll
-  table
-    width: 100%
-    min-width: 600px
-    position: relative
-    td
-      padding-left: 4px
-      padding-right: 4px
-    th
-      padding-left: 8px
-      padding-right: 8px
-      text-align: left
-      background: silver
-      box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf
+	height: 500px
+	background-color: #FFF
+	margin: -8px
+	overflow-y: scroll
+	position: relative
+	table
+		width: 100%
+		min-width: 600px
+		&.sticky
+			position: sticky
+			top: 0
+		td
+			padding-left: 4px
+			padding-right: 4px
+		th
+			padding-left: 8px
+			padding-right: 8px
+			text-align: left
+			background: silver
+			box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf
 </style>
