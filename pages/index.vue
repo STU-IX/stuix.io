@@ -3,7 +3,7 @@ div
   img(src="//raw.githubusercontent.com/STU-IX/branding/main/Logo/Logo.svg",width="256px")
   br
   br
-  p This is a non-profit IX (Internet Exchange)
+  p Student & Technology United Internet Exchanges
 
   section.field-row(style='justify-content: flex-end')
     a(href='/join/')
