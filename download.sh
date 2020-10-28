@@ -8,7 +8,6 @@ curl --silent --url "${FILE_URL}" | \
       "IPv6": (if .["gsx$ipv6"]["$t"] == "TRUE" then true else false end),
       "Country": .["gsx$country"]["$t"],
       "Org": .["gsx$org"]["$t"],
-      "NIC": .["gsx$nic"]["$t"],
-      "OwnerTgId": .["gsx$ownertgid"]["$t"]
+      "NIC": .["gsx$nic"]["$t"]
     }' | \
 	jq -s '.' > static/data/members.json
