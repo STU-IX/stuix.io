@@ -6,9 +6,9 @@ An IX (Internet Exchange) allows networks to interconnect on an open-access ethe
 
 ## Where is STUIX?
 
-(Comming Soon)
+(Coming Soon)
 
-PeeringDB: (Comming Soon)
+PeeringDB: (Coming Soon)
 
 ## How much does it cost?
 
