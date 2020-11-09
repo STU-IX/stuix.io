@@ -9,7 +9,6 @@
 					<th>Country</th>
 					<th>NIC</th>
 					<th>Org</th>
-					<th>TG</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -24,7 +23,6 @@
 					<td>{{ item.Country }}</td>
 					<td>{{ item.NIC }}</td>
 					<td>{{ item.Org }}</td>
-					<td>{{ item.OwnerTgId }}</td>
 				</tr>
 			</tbody>
 		</table>
