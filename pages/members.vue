@@ -6,7 +6,7 @@
 					<th>AS</th>
 					<th>IPv4</th>
 					<th>IPv6</th>
-					<th>Country</th>
+					<th>ASN Country</th>
 					<th>NIC</th>
 					<th>Org</th>
 				</tr>
