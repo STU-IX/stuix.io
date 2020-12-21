@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl --silent --url "${FILE_URL}" | \
+curl -s --url "${FILE_URL}" | \
 	jq '.feed.entry[] |
     {
       "ASN": .["gsx$asn"]["$t"],
