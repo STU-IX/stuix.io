@@ -6,7 +6,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - Technology United Internet Exchanges',
+    titleTemplate: '%s - Student & Technology United Internet Exchanges',
     title: 'STUIX',
     meta: [
       { charset: 'utf-8' },
