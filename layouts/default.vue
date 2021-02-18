@@ -22,12 +22,6 @@
 		<div id="content">
 			<nuxt />
 		</div>
-		<footer>
-			<div class="container">
-				<hr v-show="$store.state.title!='Home'" />Design by
-				<a href="https://gnehs.net" target="_blank">gnehs</a>.
-			</div>
-		</footer>
 	</div>
 </template>
 
