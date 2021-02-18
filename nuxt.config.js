@@ -1,5 +1,3 @@
-import colors from 'vuetify/es5/util/colors'
-
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -16,8 +14,8 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '//raw.githubusercontent.com/STU-IX/branding/main/Logo/Logo.svg' },
-      { rel: 'stylesheet', href: '/css/reset.css' },
-      { rel: 'stylesheet', href: '//unpkg.com/98.css' }
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap' },
     ]
   },
 
@@ -34,33 +32,12 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-    // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    'bootstrap-vue/nuxt'
   ],
-
-  // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
-  vuetify: {
-    customVariables: ['~/assets/variables.scss'],
-    theme: {
-      dark: false,
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
-  },
-
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   }

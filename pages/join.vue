@@ -1,65 +1,28 @@
 <template>
-	<div>
-		<form @submit.prevent="sendForm">
-			<div class="field-row-stacked" style="width: 200px">
-				<label for="ASN">ASN:</label>
-				<input required type="text" id="ASN" v-model="form.ASN" />
+	<div class="container">
+		<b-form @submit.prevent="sendForm">
+			<b-form-group label="ASN *" label-for="ASN">
+				<b-form-input id="ASN" v-model="form.ASN" placeholder="ASN" required></b-form-input>
+			</b-form-group>
+			<b-form-group label="Network Name *" label-for="Network_Name">
+				<b-form-input id="Network_Name" v-model="form.Network_Name" placeholder="Network Name" required></b-form-input>
+			</b-form-group>
+			<b-form-group label="Contact Email *" label-for="Email">
+				<b-form-input id="Email" type="email" v-model="form.Email" placeholder="Contact Email" required></b-form-input>
+			</b-form-group>
+			<b-form-group label="Website" label-for="Website">
+				<b-form-input id="Website" v-model="form.Website" placeholder="Website"></b-form-input>
+			</b-form-group>
+			<div style="text-align:center">
+				<b-button type="submit" style="padding: 10px 40px">Submit</b-button>
 			</div>
-			<div class="field-row-stacked" style="width: 200px">
-				<label for="Network_Name">Network Name:</label>
-				<input required type="text" id="Network_Name" v-model="form.Network_Name" />
-			</div>
-			<div class="field-row-stacked" style="width: 200px">
-				<label for="Email">Contact Email:</label>
-				<input required type="email" id="Email" v-model="form.Email" />
-			</div>
-			<div class="field-row-stacked" style="width: 200px">
-				<label for="WebSite">Website (optional):</label>
-				<input type="text" id="WebSite" v-model="form.Website" />
-			</div>
-			<br />
-			<button type="submit">Submit</button>
-		</form>
-		<div class="alert-window-dimmer" v-show="successAlert"></div>
-		<div class="alert-window-container" v-show="successAlert">
-			<div class="alert-window window" style="width: 300px">
-				<div class="title-bar">
-					<div class="title-bar-text">STUIX</div>
-					<div class="title-bar-controls">
-						<button aria-label="Minimize"></button>
-						<button aria-label="Maximize"></button>
-						<button aria-label="Close"></button>
-					</div>
-				</div>
-				<div class="window-body">
-					<img src="/img/msg_information-0.png" style="float:left;margin-right: 16px" />
-					<p>Sent successfully!</p>
-					<section class="field-row" style="justify-content: flex-end">
-						<button @click="successAlert=false">OK</button>
-					</section>
-				</div>
-			</div>
-		</div>
+		</b-form>
+		<b-modal id="success-alert" ok-only>
+			<template #modal-title>Message</template>
+			Sent successfully!
+		</b-modal>
 	</div>
-</template>
-<style lang="sass" scoped>
-.alert-window-dimmer
-	background: rgba(0,0,0,.7)
-.alert-window-container,.alert-window-dimmer
-	position: fixed
-	width: 100vw
-	height: 100vh
-	left: 0
-	right: 0
-	top: 0
-	bottom: 0
-	.alert-window
-		position: absolute
-		left: 0
-		right: 0
-		top: 100px
-		margin: auto
-</style>
+</template> 
 <script>
 export default {
 	data() {
@@ -78,7 +41,6 @@ export default {
 	mounted() {
 		this.$store.commit('updatePage', this.page)
 		this.$store.commit('updateTitle', this.title)
-
 	},
 	methods: {
 		async sendForm() {
@@ -89,17 +51,18 @@ export default {
 			data.append('entry.1229920969', this.form.Website);
 			try {
 				await fetch('https://docs.google.com/forms/d/e/1FAIpQLSdYEP9EB3SsZlpPPzV73_WpIF4D3CeqAwMko-ZBdcpjO7CNkw/formResponse', { method: 'post', body: data, mode: 'no-cors' })
+
+				//reset form
+				this.form = {
+					ASN: '',
+					Network_Name: '',
+					Email: "",
+					Website: ''
+				}
+				this.$bvModal.show('success-alert')
 			} catch (e) {
 				alert('Error: ' + e)
 			}
-			//reset form
-			this.form = {
-				ASN: '',
-				Network_Name: '',
-				Email: "",
-				Website: ''
-			}
-			this.successAlert = true
 		}
 	}
 }

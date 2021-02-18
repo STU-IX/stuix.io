@@ -1,11 +1,13 @@
 <template>
-	<div class="sponsor-container">
-		<div class="sponsor">
-			<img src="/img/sponsor/twds.png" />
-			<p>
-				Taiwan Digital Streaming Co.
-				<br />台灣數位串流有限公司
-			</p>
+	<div class="container">
+		<div class="sponsor-container">
+			<div class="sponsor">
+				<img src="/img/sponsor/twds.png" />
+				<p>
+					Taiwan Digital Streaming Co.
+					<br />台灣數位串流有限公司
+				</p>
+			</div>
 		</div>
 	</div>
 </template>
@@ -13,10 +15,15 @@
 .sponsor-container
 	display: flex
 	flex-wrap: wrap
+	margin: 0 -4px
 	.sponsor
 		width: 50%
 		flex: 1
 		text-align: center
+
+		background-color: rgba(0, 0, 0, 0.05)
+		margin: 4px
+		border-radius: 4px
 </style>
 <script>
 export default {

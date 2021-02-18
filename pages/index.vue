@@ -1,33 +1,70 @@
 <template lang="pug">
 div
-	.lr-container
-		.l
-			img(
-				src="//raw.githubusercontent.com/STU-IX/branding/main/Logo/Logo.svg",
-				width="256px"
-			)
-		.r
-			p Student &amp; Technology United Internet Exchanges
-			p A community based Internet Exchanges
-			p 
-				a(href="https://ixpm.stuix.io") Traffic &amp; Status (IXP Manager)
+	.container
+		.home-about
+			.content
+				p Student &amp; Technology United Internet Exchanges
+				p A community based Internet Exchanges
+				p 
+					a(href="https://ixpm.stuix.io") Traffic &amp; Status (IXP Manager)
 
-	section.field-row(style="justify-content: flex-end")
-		a(href="/join/")
-			button Join STUIX!
+			.image-box
+				img.server(src="/img/server.jpg", width="256px")
+				img.logo(
+					src="//raw.githubusercontent.com/STU-IX/branding/main/Logo/Logo.svg",
+					width="128px"
+				)
+	.join-info
+		.container
+			.content
+				h3 Join STUIX!
+				//div blah blah blah
+			.join-button
+				b-button(to="/join", block) Join
 </template>
 <style lang="sass">
-.lr-container
-  display: flex
-  .l
-  .r
-    padding: 0 20px
-    flex: 1
+.home-about
+	display: flex
+	align-items: center
+	.image-box
+		position: relative
+		width: 300px
+		height: 244px
+		img
+			box-shadow: 0 8px 9px -5px rgba(0,0,0,.2),0 15px 22px 2px rgba(0,0,0,.14),0 6px 28px 5px rgba(0,0,0,.12)
+		.logo
+			position: absolute
+			left: -20px
+			top: 80px
+		.server
+			transform: translate(0,20px)
+	.content
+		flex: 1
+.join-info
+	background-color: rgba(0, 0, 0, 0.05)
+	padding: 40px 0
+	.container
+		display: flex
+		align-items: center
+		.content
+			flex: 1
+		.join-button
+			width: 120px
+			.btn
+				padding: 10px 0
+
 @media screen and (max-width: 768px)
-  .lr-container
-    display: block
-    .l
-      text-align: center
+	.home-about
+		flex-direction: column-reverse
+		.content,.image-box
+			text-align: center
+		.image-box
+			height: auto
+			margin: 20px 0
+			.server
+				display: none
+			.logo
+				position: initial
 </style>
 <script>
 export default {

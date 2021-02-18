@@ -1,50 +1,29 @@
-@import url(//unpkg.com/98.css)
-@font-face 
-  font-family: zpix
-  src: url('/zpix.woff2'),url('/zpix.ttf')
-
-.theme--light.v-card, .theme--light.v-application, .theme--light.v-sheet, .theme--light.v-card
-  background-color: transparent !important
-button a, a button
-  color: black !important
-button
-  background-color: silver !important
-hr
-  margin: 5px
-body,h1,h2,h3,h4,h5,h6,header p,#footer p,p
-  font-family: 'zpix','Times New Roman', Times, '新細明體', 'Noto Sans TC', serif
 body
-  font-size: 16px
-  background-image: url('/img/bg.jpg')
-  background-size: 256px
-  background-repeat: repeat
-#container
-  max-width: 90%
-  width: 640px
-  margin: 0 auto
-header
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+.page-title
+  font-size: 56px
+  margin-top: 56px
+  margin-bottom: 16px
   text-align: center
-  h1
-    font-size: 86px
-    background-image: linear-gradient(to left, orange , yellow, green, cyan, blue, violet)
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
-    display: inline
-    filter: drop-shadow(-4px 4px 0px rgba(0,0,0,.8))
-  p
-    font-size: 24px
-#nav
-  text-align: center
-  a
-    padding: 6px 2px
-    text-decoration: none
-    button
-      cursor: pointer
-.window
-  font-size: 14px
-#footer
-  text-align: center
-// 98.css fix
-button.active
-  box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px #808080
+.container
+  max-width: 768px
+.form-control
+  padding: 0 24px
+  min-height: 64px
+  background-color: rgba(0, 0, 0, 0.05)
+  border: none
+  &:focus
+    box-shadow: none
 
+    background-color: rgba(0, 0, 0, 0.05)
+  &::placeholder
+    color: #c9c9c9
+@media (max-width: 768px)
+  nav
+    border-bottom: 1px solid #ececec
+@media (min-width: 768px)
+  nav 
+    &>.container
+      padding: 0 15px !important
+footer
+  padding: 20px 0

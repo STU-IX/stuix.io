@@ -1,36 +1,17 @@
 <template>
-	<div id="members-container">
-		<table>
-			<thead>
-				<tr>
-					<th>AS</th>
-					<th>IPv4</th>
-					<th>IPv6</th>
-					<th>ASN Country</th>
-					<th>NIC</th>
-					<th>Org</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr v-for="(item, i) in members" :key="i">
-					<td>{{ item.ASN }}</td>
-					<td>
-						<v-icon v-show="item.IPv4">mdi-check-bold</v-icon>
-					</td>
-					<td>
-						<v-icon v-show="item.IPv6">mdi-check-bold</v-icon>
-					</td>
-					<td>{{ item.Country }}</td>
-					<td>{{ item.NIC }}</td>
-					<td>{{ item.Org }}</td>
-				</tr>
-			</tbody>
-		</table>
+	<div id="members-container" class="container">
+		<b-table borderless striped :items="members" :fields="fields">
+			<template #cell(IPv4)="data">
+				<span v-show="data.value">✓</span>
+			</template>
+			<template #cell(IPv6)="data">
+				<span v-show="data.value">✓</span>
+			</template>
+		</b-table>
 	</div>
 </template>
 
-<script>
-import '@mdi/font/css/materialdesignicons.css'
+<script> 
 import m from 'static/data/members.json'
 
 export default {
@@ -38,7 +19,15 @@ export default {
 		return {
 			page: '/members/',
 			title: 'Members',
-			members: m
+			members: m,
+			fields: [
+				{ key: 'ASN', label: 'AS' },
+				'IPv4',
+				'IPv6',
+				{ key: 'Country', label: 'ASN Country' },
+				'NIC',
+				"Org"
+			],
 		}
 	},
 	mounted() {
@@ -50,24 +39,9 @@ export default {
 
 <style lang="sass">
 #members-container
-	height: 500px
 	background-color: #FFF
-	margin: -8px
-	overflow-y: scroll
 	position: relative
+	overflow-x: scroll
 	table
-		width: 100%
-		min-width: 600px
-		td
-			padding-left: 4px
-			padding-right: 4px
-		th
-			padding-left: 8px
-			padding-right: 8px
-			text-align: left
-			background: silver
-			box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf
-			position: sticky
-			top: 0
-			z-index: 2
+		min-width: 700px
 </style>

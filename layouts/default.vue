@@ -1,53 +1,39 @@
 <template>
-	<v-app dark>
-		<v-main>
-			<v-container>
-				<v-row no-gutters>
-					<v-col md="8" offset-md="2">
-						<v-card elevation="0">
-							<header>
-								<h1>STUIX</h1>
-								<p>Wow such a non-profit IX</p>
-							</header>
-							<div id="content">
-								<hr />
-								<div id="nav">
-									<a v-for="(item, i) in items" :key="i" :href="item.to">
-										<button :class="( $store.state.page == item.to ? 'active' : '' )">{{ item.title }}</button>
-									</a>
-								</div>
-								<hr />
-								<div class="window">
-									<div class="title-bar">
-										<div class="title-bar-text">{{ $store.state.title }}</div>
-										<div class="title-bar-controls">
-											<button aria-label="Minimize"></button>
-											<button aria-label="Maximize"></button>
-											<button aria-label="Close"></button>
-										</div>
-									</div>
-									<div class="window-body">
-										<nuxt />
-									</div>
-								</div>
-							</div>
-							<div id="footer">
-								<hr />
-								<p>
-									Design by
-									<a href="https://gnehs.net" target="_blank">gnehs</a>.
-								</p>
-							</div>
-						</v-card>
-					</v-col>
-				</v-row>
-			</v-container>
-		</v-main>
-	</v-app>
+	<div>
+		<b-navbar toggleable="lg">
+			<div class="container">
+				<b-navbar-brand to="/">STUIX</b-navbar-brand>
+
+				<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+				<b-collapse id="nav-collapse" is-nav>
+					<b-navbar-nav class="ml-auto">
+						<b-nav-item
+							v-for="(item, i) in items"
+							:key="i"
+							:to="item.to"
+							:active="$store.state.page == item.to"
+						>{{ item.title }}</b-nav-item>
+					</b-navbar-nav>
+				</b-collapse>
+			</div>
+		</b-navbar>
+
+		<h1 class="page-title" v-show="$store.state.title!='Home'">{{ $store.state.title|| '_' }}</h1>
+		<div id="content">
+			<nuxt />
+		</div>
+		<footer>
+			<div class="container">
+				<hr v-show="$store.state.title!='Home'" />Design by
+				<a href="https://gnehs.net" target="_blank">gnehs</a>.
+			</div>
+		</footer>
+	</div>
 </template>
 
 <script>
-import 'assets/index.sass'
+import '@/assets/index.sass'
 
 export default {
 	data() {
