@@ -7,7 +7,11 @@ div
 				width="256px"
 			)
 		.r
-			p Student & Technology United Internet Exchanges
+			p Student &amp; Technology United Internet Exchanges
+      p A community based Internet Exchanges
+      p 
+        a(href="https://ixpm.stuix.io")
+          Traffic &amp; Status (IXP Manager)
 
 	section.field-row(style="justify-content: flex-end")
 		a(href="/join/")
