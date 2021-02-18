@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+.index-container
 	.container
 		.home-about
 			.content
@@ -22,10 +22,21 @@ div
 			.join-button
 				b-button(to="/join", block) Join
 </template>
+<style lang="sass" scoped>
+.index-container
+	display: flex
+	flex-direction: column
+	height: calc(100vh - 59px - 56px)
+	&>.container
+		flex: 1
+		display: flex
+</style>
 <style lang="sass">
 .home-about
 	display: flex
+	justify-content: center
 	align-items: center
+	width: 100%
 	.image-box
 		position: relative
 		width: 300px
@@ -56,6 +67,8 @@ div
 @media screen and (max-width: 768px)
 	.home-about
 		flex-direction: column-reverse
+		.content
+			flex: initial
 		.content,.image-box
 			text-align: center
 		.image-box

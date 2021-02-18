@@ -1,5 +1,16 @@
 body
   font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+.app
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  nav
+  #content
+    flex: 1
+  footer
+    padding: 20px 0
+    font-size: .8em
+    opacity: .8
 .page-title
   font-size: 56px
   margin-top: 56px
@@ -24,6 +35,4 @@ body
 @media (min-width: 768px)
   nav 
     &>.container
-      padding: 0 15px !important
-footer
-  padding: 20px 0
+      padding: 0 15px !important 

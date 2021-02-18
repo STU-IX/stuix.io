@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<b-navbar toggleable="lg">
+	<div class="app">
+		<b-navbar toggleable="md">
 			<div class="container">
 				<b-navbar-brand to="/">STUIX</b-navbar-brand>
 
@@ -18,8 +18,7 @@
 				</b-collapse>
 			</div>
 		</b-navbar>
-
-		<h1 class="page-title" v-show="$store.state.title!='Home'">{{ $store.state.title|| '_' }}</h1>
+		<h1 class="page-title" v-show="$store.state.title!='Home'">{{ $store.state.title }}</h1>
 		<div id="content">
 			<nuxt />
 		</div>
