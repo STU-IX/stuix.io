@@ -41,8 +41,10 @@
 		position: relative
 		width: 300px
 		height: 244px
+		text-align: right
 		img
 			box-shadow: 0 8px 9px -5px rgba(0,0,0,.2),0 15px 22px 2px rgba(0,0,0,.14),0 6px 28px 5px rgba(0,0,0,.12)
+			border-radius: 4px
 		.logo
 			position: absolute
 			left: -20px
