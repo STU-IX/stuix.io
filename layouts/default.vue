@@ -1,6 +1,6 @@
 <template>
 	<div class="app">
-		<b-navbar toggleable="md">
+		<b-navbar>
 			<div class="container">
 				<b-navbar-brand to="/">STUIX</b-navbar-brand>
 
@@ -32,10 +32,10 @@ export default {
 	data() {
 		return {
 			items: [
-				{
+				/*{
 					title: 'Home',
 					to: '/'
-				},
+				},*/
 				{
 					title: 'About',
 					to: '/about/'
@@ -63,6 +63,13 @@ export default {
 ╚════██║   ██║   ██║   ██║██║ ██╔██╗
 ███████║   ██║   ╚██████╔╝██║██╔╝ ██╗
 ╚══════╝   ╚═╝    ╚═════╝ ╚═╝╚═╝  ╚═╝`.trim())
+		//set vh
+		function vhResize() {
+			let vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty("--vh", `${vh}px`);
+		}
+		window.addEventListener("resize", vhResize);
+		vhResize();
 	}
 }
 </script>

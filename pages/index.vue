@@ -26,7 +26,7 @@
 .index-container
 	display: flex
 	flex-direction: column
-	min-height: calc(100vh - 56px)
+	min-height: calc(var(--vh) * 100 - 56px)
 	&>.container
 		flex: 1
 		display: flex
