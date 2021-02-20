@@ -14,6 +14,7 @@
 
 <script>
 export default {
+	layout: ({ layout }) => layout,
 	data() {
 		return {
 			page: '/about/',

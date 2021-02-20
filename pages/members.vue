@@ -15,6 +15,7 @@
 import m from 'static/data/members.json'
 
 export default {
+	layout: ({ layout }) => layout,
 	data() {
 		return {
 			page: '/members/',
@@ -39,7 +40,6 @@ export default {
 
 <style lang="sass">
 #members-container
-	background-color: #FFF
 	position: relative
 	overflow-x: scroll
 	table

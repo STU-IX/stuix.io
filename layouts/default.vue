@@ -1,5 +1,5 @@
 <template>
-	<div class="app">
+	<div class="app" v-konami="konami" :key="$store.state.win95">
 		<b-navbar>
 			<div class="container">
 				<b-navbar-brand to="/">STUIX</b-navbar-brand>
@@ -70,6 +70,22 @@ export default {
 		}
 		window.addEventListener("resize", vhResize);
 		vhResize();
+	},
+	methods: {
+		konami() {
+			document.body.classList.add("win95theme");
+			this.$store.commit('updateTheme', true)
+
+			//import win95 css
+			var head = document.getElementsByTagName('head')[0];
+			var win95css = document.createElement('link');
+			win95css.rel = 'stylesheet';
+			win95css.type = 'text/css';
+			win95css.href = '//unpkg.com/98.css';
+			head.appendChild(win95css);
+
+			this.$router.push('/konami')
+		}
 	}
 }
 </script>

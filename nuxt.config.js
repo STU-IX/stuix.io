@@ -23,8 +23,12 @@ export default {
   css: [
   ],
 
+  router: {
+    middleware: ['win95']
+  },
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    '@/plugins/konami.js'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

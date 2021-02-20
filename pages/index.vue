@@ -27,6 +27,8 @@
 	display: flex
 	flex-direction: column
 	min-height: calc(var(--vh) * 100 - 56px)
+	.win95 &
+		min-height: initial
 	&>.container
 		flex: 1
 		display: flex
@@ -45,6 +47,9 @@
 		img
 			box-shadow: 0 8px 9px -5px rgba(0,0,0,.2),0 15px 22px 2px rgba(0,0,0,.14),0 6px 28px 5px rgba(0,0,0,.12)
 			border-radius: 4px
+			.win95 &
+				box-shadow: 10px 10px 0 0 rgba(0, 0, 0, .5)
+				border-radius: 0
 		.logo
 			position: absolute
 			left: -20px
@@ -56,6 +61,8 @@
 .join-info
 	background-color: rgba(0, 0, 0, 0.05)
 	padding: 40px 0
+	.win95 &
+		background: silver
 	.container
 		display: flex
 		align-items: center
@@ -65,7 +72,6 @@
 			width: 120px
 			.btn
 				padding: 10px 0
-
 @media screen and (max-width: 768px)
 	.home-about
 		flex-direction: column-reverse
@@ -83,6 +89,7 @@
 </style>
 <script>
 export default {
+	layout: ({ layout }) => layout,
 	data() {
 		return {
 			page: '/',

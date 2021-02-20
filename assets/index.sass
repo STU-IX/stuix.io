@@ -3,7 +3,8 @@ body
 .app
   display: flex
   flex-direction: column
-  min-height: calc(var(--vh) * 100)
+  height: 100vh
+  overflow-y: auto
   nav
   #content
     flex: 1 
@@ -14,14 +15,13 @@ body
   text-align: center
 .container
   max-width: 768px
-.form-control
+body:not(.win95theme) .form-control
   padding: 0 24px
   min-height: 64px
   background-color: rgba(0, 0, 0, 0.05)
   border: none
   &:focus
     box-shadow: none
-
     background-color: rgba(0, 0, 0, 0.05)
   &::placeholder
     color: #c9c9c9 

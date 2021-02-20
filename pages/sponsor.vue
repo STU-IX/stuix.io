@@ -24,9 +24,15 @@
 		background-color: rgba(0, 0, 0, 0.05)
 		margin: 4px
 		border-radius: 4px
+
+		.win95 &
+			border-radius: 0
+			background: #fff
+			box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a
 </style>
 <script>
 export default {
+	layout: ({ layout }) => layout,
 	data() {
 		return {
 			page: '/sponsor/',
