@@ -9,7 +9,10 @@
 	h4 Who are the network operators?
 	p Currently @seadog007 is maintaining the working system.
 	h4 Special Thanks
-	p @gnehs for designing the webpage.
+	p
+		a(href="https://gnehs.net", target="_blank") @gnehs
+		|
+		| for designing the webpage.
 </template>
 
 <script>
