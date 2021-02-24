@@ -8,12 +8,13 @@
 	p The playground of networking player is restricted by the amount of cost to participate in the professional networking community in Taiwan.
 	p Therefore, creating a cheaper environment for networking player in Taiwan is our goal, which is a motivation for enhancing the communication between networking players, providing technical communication and educating the younger generation for participate in the networking operating field.
 	h4 Who are the network operators?
-	p | Currently,
-		| a(href="https://seadog007.me", target="_blank") @seadog007
+	p Currently,
+		|
+		a(href="https://seadog007.me", target="_blank") @seadog007
 		|
 		| is maintaining IXPM and RS.
 		|
-		| a(href="https://licson.net", target="_blank") @licson
+		a(href="https://licson.net", target="_blank") @licson
 		|
 		| for switches configuration.
 	h4 Special Thanks
@@ -38,3 +39,4 @@ export default {
 	}
 }
 </script>
+
