@@ -36,12 +36,11 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-gtag'
   ],
-  googleAnalytics: {
+  'google-gtag': {
     id: 'G-221P8NT84C'
   },
-
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     'bootstrap-vue/nuxt'

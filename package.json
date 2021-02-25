@@ -9,13 +9,13 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/google-gtag": "^1.0.4",
     "bootstrap": "^4.6.0",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
     "vue-konami": "^1.1.0"
   },
   "devDependencies": {
-    "@nuxtjs/google-analytics": "^2.4.0",
     "bootstrap-vue": "^2.21.2",
     "pug": "^3.0.0",
     "pug-plain-loader": "^1.0.0",
