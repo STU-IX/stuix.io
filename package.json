@@ -15,6 +15,7 @@
     "vue-konami": "^1.1.0"
   },
   "devDependencies": {
+    "@nuxtjs/google-analytics": "^2.4.0",
     "bootstrap-vue": "^2.21.2",
     "pug": "^3.0.0",
     "pug-plain-loader": "^1.0.0",
