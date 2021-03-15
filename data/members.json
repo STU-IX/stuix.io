@@ -1,0 +1,90 @@
+[
+  {
+    "ASN": "17415",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "MingYi Tea Farm",
+    "NIC": "TWNIC"
+  },
+  {
+    "ASN": "18041",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Taiwan Digital Streaming Co. Transit",
+    "NIC": "TWNIC"
+  },
+  {
+    "ASN": "38855",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "STUIX Route Server",
+    "NIC": "TWNIC"
+  },
+  {
+    "ASN": "60614",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Tsung-Yi Yu",
+    "NIC": "RIPE"
+  },
+  {
+    "ASN": "131657",
+    "IPv4": true,
+    "IPv6": false,
+    "Country": "TW",
+    "Org": "Huang Hr Co., Ltd.",
+    "NIC": "TWNIC"
+  },
+  {
+    "ASN": "131668",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Taiwan Digital Streaming Co.",
+    "NIC": "TWNIC"
+  },
+  {
+    "ASN": "138997",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "HK",
+    "Org": "Eons Data Communications Limited",
+    "NIC": "APNIC"
+  },
+  {
+    "ASN": "207468",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "DE",
+    "Org": "Li-Heng Yu",
+    "NIC": "RIPE"
+  },
+  {
+    "ASN": "207469",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "DE",
+    "Org": "Sung-Yu Li",
+    "NIC": "RIPE"
+  },
+  {
+    "ASN": "212331",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Ta-Li Lai",
+    "NIC": "RIPE"
+  },
+  {
+    "ASN": "212425",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Ming-Chien Lee",
+    "NIC": "RIPE"
+  }
+]
