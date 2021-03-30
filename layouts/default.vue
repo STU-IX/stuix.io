@@ -83,8 +83,7 @@ export default {
 			win95css.type = 'text/css';
 			win95css.href = '//unpkg.com/98.css';
 			head.appendChild(win95css);
-
-			this.$router.push('/konami')
+			this.$router.push(`/konami?r=${this.$route.path}`)
 		}
 	}
 }

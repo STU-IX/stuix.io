@@ -19,6 +19,7 @@ export default {
 	mounted() {
 		this.$store.commit('updatePage', this.page)
 		this.$store.commit('updateTitle', this.title)
+		this.$router.push(this.$route.query.r || '/')
 	}
 }
 </script>
