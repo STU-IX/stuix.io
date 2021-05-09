@@ -1,4 +1,5 @@
 # Official Website of STUIX
+[![Release](https://github.com/STU-IX/stuix.io/actions/workflows/release.yml/badge.svg)](https://github.com/STU-IX/stuix.io/actions/workflows/release.yml)
 
 ## What is an Internet Exchange?
 
