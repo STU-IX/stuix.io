@@ -1,15 +1,22 @@
 <template>
-	<div class="container">
-		<div class="sponsor-container">
-			<div class="sponsor">
-				<img src="/img/sponsor/twds.png" />
-				<p>
-					Taiwan Digital Streaming Co.
-					<br />台灣數位串流有限公司
-				</p>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="sponsor-container">
+            <div class="sponsor">
+                <img src="/img/sponsor/twds.png" />
+                <p>
+                    Taiwan Digital Streaming Co.
+                    <br />台灣數位串流有限公司
+                </p>
+            </div>
+            <div class="sponsor">
+                <img src="/img/sponsor/sky.png" />
+                <p>
+                    Sky Digital Co., Ltd.
+                    <br />天空數位有限公司
+                </p>
+            </div>
+        </div>
+    </div>
 </template>
 <style lang="sass" scoped>
 .sponsor-container
@@ -24,7 +31,8 @@
 		background-color: rgba(0, 0, 0, 0.05)
 		margin: 4px
 		border-radius: 4px
-
+		img
+			width: 75%
 		.win95 &
 			border-radius: 0
 			background: #fff
@@ -32,16 +40,16 @@
 </style>
 <script>
 export default {
-	layout: ({ layout }) => layout,
-	data() {
-		return {
-			page: '/sponsor/',
-			title: 'Sponsor'
-		}
-	},
-	mounted() {
-		this.$store.commit('updatePage', this.page)
-		this.$store.commit('updateTitle', this.title)
-	}
-}
+    layout: ({ layout }) => layout,
+    data() {
+        return {
+            page: "/sponsor/",
+            title: "Sponsor",
+        };
+    },
+    mounted() {
+        this.$store.commit("updatePage", this.page);
+        this.$store.commit("updateTitle", this.title);
+    },
+};
 </script>
