@@ -15,6 +15,13 @@
                     <br />天空數位有限公司
                 </p>
             </div>
+            <div class="sponsor">
+                <img src="/img/sponsor/eons.png" />
+                <p>
+                    Eons Data Communications Limited
+                    <br />億安數據通信有限公司
+                </p>
+            </div>
         </div>
     </div>
 </template>
