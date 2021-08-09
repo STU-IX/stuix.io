@@ -26,8 +26,8 @@ export default {
 				'IPv4',
 				'IPv6',
 				{ key: 'Country', label: 'ASN Country' },
-				'NIC',
-				"Org"
+				"Org",
+				"Status"
 			],
 		}
 	},
