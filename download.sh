@@ -1,13 +1,13 @@
 #!/bin/bash
 
-curl -s --url "${FILE_URL}" | \
-	jq '.feed.entry[] |
-    {
-      "ASN": .["gsx$asn"]["$t"],
-      "IPv4": (if .["gsx$ipv4"]["$t"] == "TRUE" then true else false end),
-      "IPv6": (if .["gsx$ipv6"]["$t"] == "TRUE" then true else false end),
-      "Country": .["gsx$country"]["$t"],
-      "Org": .["gsx$org"]["$t"],
-      "Status": .["gsx$status"]["$t"]
-    }' | \
-	jq -s '.' > static/data/members.json
+# Google why you removed v3 API???????
+curl -s --url "https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}?includeGridData=true&key=${GOOGLE_API_KEY}" | \
+    jq '.sheets[] | select(.properties.sheetId == '${SHEET_ID}') | select(.data[] != null) | .data[].rowData[] |
+    select(.values[0].formattedValue != null and .values[0].formattedValue != "ASN") | {
+    "ASN": .values[0].formattedValue,
+    "IPv4": (if .values[1].formattedValue == "TRUE" then true else false end),
+    "IPv6": (if .values[2].formattedValue == "TRUE" then true else false end),
+    "Country": .values[3].formattedValue,
+    "Org": .values[4].formattedValue,
+    "Status": .values[6].formattedValue
+}' | jq -s '.' > static/data/members.json
