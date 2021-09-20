@@ -41,7 +41,9 @@ jobs:
     - name: Download Members File
       run: ./download.sh
       env:
-        FILE_URL: ${{ secrets.FILE_URL }}
+        GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
+        SHEET_ID: ${{ secrets.SHEET_ID }}
     - name: Generate Pages
       env:
         GO111MODULE: on
