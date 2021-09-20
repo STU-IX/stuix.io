@@ -22,12 +22,12 @@ export default {
 			title: 'Members',
 			members: m,
 			fields: [
-				{ key: 'ASN', label: 'AS' },
+				'ASN',
 				'IPv4',
 				'IPv6',
-				{ key: 'Country', label: 'ASN Country' },
-				"Org",
-				"Status"
+				'Country',
+				'Org',
+				'Status'
 			],
 		}
 	},
