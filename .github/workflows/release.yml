@@ -6,6 +6,8 @@ on:
   workflow_dispatch:
   repository_dispatch:
     types: [button_build]
+  schedule:
+    - cron: '0 0 * * *' # Daily build
 
 jobs:
   deploy:
