@@ -8,7 +8,7 @@
         <span v-show="data.value">✓</span>
       </template>
       <template #cell(Org)="data">
-        <span>{{ data.value }} <span v-show="data.item.MANRS" class="tag">MANRS</span></span>
+        <span>{{ data.value }} <a v-show="data.item.MANRS" class="tag" href="https://www.manrs.org/" target="_blank">MANRS</a></span>
       </template>
     </b-table>
   </div>
