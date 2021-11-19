@@ -22,7 +22,7 @@
   p This IXP provide a few policies for improving Internet security
   p IRR Filter by automatic retrieving the IP list from an as-set from IRRDBs.
   p RPKI Filter by RPKI Validator TWNIC, Cloudflare.
-  p The security features above will ensure that the announcements our customers receive will be valid from AS Origin
+  p The security features above will ensure that the announcements our customers receive will be valid from AS Origin.
 	h4 Special Thanks
 	p
 		a(href="https://gnehs.net", target="_blank") @gnehs
