@@ -1,15 +1,15 @@
 <template>
   <div class="container">
     <!-- <h2>Platinum</h2>
-    <div class="sponsor-container platinum">
-      <div class="sponsor">
-        <img src="/img/sponsor/sky.png" />
-        <div class="name">
-          <div class="en">Sky Digital Co., Ltd.</div>
-          <div class="zh">天空數位有限公司</div>
-        </div>
-      </div>
-    </div> -->
+		<div class="sponsor-container platinum">
+			<div class="sponsor">
+				<img src="/img/sponsor/sky.png" />
+				<div class="name">
+					<div class="en">Sky Digital Co., Ltd.</div>
+					<div class="zh">天空數位有限公司</div>
+				</div>
+			</div>
+		</div> -->
 
     <h2>Gold</h2>
     <div class="sponsor-container gold">
@@ -40,16 +40,16 @@
       </div>
     </div>
 
-    <!-- <h2>Bronze</h2>
+    <h2>Bronze</h2>
     <div class="sponsor-container bronze">
       <div class="sponsor">
-        <img src="/img/sponsor/twds.png" />
+        <img src="/img/sponsor/Metropolis.png" />
         <div class="name">
-          <div class="en">Taiwan Digital Streaming Co.</div>
-          <div class="zh">台灣數位串流有限公司</div>
+          <div class="en">Metropolis Networks Inc.</div>
+          <!-- <div class="zh" style="opicity: 0">_</div> -->
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 <style lang="sass" scoped>
