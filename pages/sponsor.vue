@@ -9,7 +9,7 @@
 					<div class="zh">天空數位有限公司</div>
 				</div>
 			</div>
-		</div> -->
+    </div>-->
 
     <h2>Gold</h2>
     <div class="sponsor-container gold">
@@ -46,6 +46,13 @@
         <img src="/img/sponsor/Metropolis.png" />
         <div class="name">
           <div class="en">Metropolis Networks Inc.</div>
+          <!-- <div class="zh" style="opicity: 0">_</div> -->
+        </div>
+      </div>
+      <div class="sponsor">
+        <img src="/img/sponsor/Skywolf.png" />
+        <div class="name">
+          <div class="en">Skywolf Technology</div>
           <!-- <div class="zh" style="opicity: 0">_</div> -->
         </div>
       </div>
