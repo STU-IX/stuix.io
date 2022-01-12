@@ -32,6 +32,13 @@
         </div>
       </div>
       <div class="sponsor">
+        <img src="/img/sponsor/FastLine.png" />
+        <div class="name">
+          <div class="en">Fast Line</div>
+          <div class="zh">台灣速連</div>
+        </div>
+      </div>
+      <div class="sponsor">
         <img src="/img/sponsor/eons.png" />
         <div class="name">
           <div class="en">Eons Data Communications Limited</div>
