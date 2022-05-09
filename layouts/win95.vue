@@ -61,6 +61,9 @@ body.win95theme
 			text-decoration: none
 			button
 				cursor: pointer
+	.input-group
+		align-items: center
+		gap: 4px
 	.form-control
 		padding: 3px 4px
 		box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a
