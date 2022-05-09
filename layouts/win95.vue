@@ -8,7 +8,7 @@
 			<hr />
 			<div id="nav">
 				<router-link v-for="(item, i) in items" :key="i" :to="item.to">
-					<button :class="( $store.state.page == item.to ? 'active' : '' )">{{ item.title }}</button>
+					<button :class="($store.state.page == item.to ? 'active' : '')">{{ item.title }}</button>
 				</router-link>
 			</div>
 			<hr />
@@ -67,6 +67,10 @@ body.win95theme
 		background-color: #fff
 		box-sizing: border-box
 		max-width: 200px
+		height: 1.5em
+		border-radius: 0
+		outline: none
+		border: none
 		&::placeholder
 			color: #fff
 	button.active

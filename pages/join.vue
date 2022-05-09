@@ -2,7 +2,10 @@
 	<div class="container">
 		<b-form @submit.prevent="sendForm">
 			<b-form-group label="ASN *" label-for="ASN">
-				<b-form-input id="ASN" v-model="form.ASN" placeholder="ASN" required></b-form-input>
+				<b-input-group>
+					<b-input-group-prepend> AS </b-input-group-prepend>
+					<b-form-input id="ASN" type="number" v-model="form.ASN" placeholder="ASN" required></b-form-input>
+				</b-input-group>
 			</b-form-group>
 			<b-form-group label="Network Name *" label-for="Network_Name">
 				<b-form-input id="Network_Name" v-model="form.Network_Name" placeholder="Network Name" required></b-form-input>

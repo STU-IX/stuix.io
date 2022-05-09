@@ -15,7 +15,8 @@ body
   text-align: center
 .container
   max-width: 768px
-body:not(.win95theme) .form-control
+body:not(.win95theme) .input-group,
+body:not(.win95theme) *:not(.input-group)>.form-control
   padding: 0 24px
   min-height: 64px
   background-color: rgba(0, 0, 0, 0.05)
@@ -25,6 +26,19 @@ body:not(.win95theme) .form-control
     background-color: rgba(0, 0, 0, 0.05)
   &::placeholder
     color: #c9c9c9 
+
+body:not(.win95theme) .input-group 
+  align-items: center
+  .form-control
+    padding: 0 24px
+    min-height: 64px 
+    border: none
+    background-color: rgba(0, 0, 0, 0)
+    &:focus
+      box-shadow: none
+      background-color: rgba(0, 0, 0, 0.0)
+    &::placeholder
+      color: #c9c9c9 
 @media (min-width: 768px)
   nav>.container
     padding: 0 15px !important 

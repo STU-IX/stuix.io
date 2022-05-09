@@ -1,1 +1,218 @@
-[]
+[
+  {
+    "ASN": "6939",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "US",
+    "Org": "Hurricane Electric LLC",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "17415",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "MingYi Tea Farm",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "18041",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Taiwan Digital Streaming Co. Transit",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "38254",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": " TW",
+    "Org": "Pang-Wei Tsai",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "38852",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Fun Finance Technology Co., Ltd.",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "38856",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Walks Cloud Inc.",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "60614",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Tsung-Yi Yu",
+    "Status": "Connected",
+    "MANRS": true
+  },
+  {
+    "ASN": "64199",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "August Internet",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "131642",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Pittqiao Network Information Co.,Ltd.",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "131657",
+    "IPv4": true,
+    "IPv6": false,
+    "Country": "TW",
+    "Org": "Huang Hr Co., Ltd.",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "131668",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Taiwan Digital Streaming Co.",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "134823",
+    "IPv4": true,
+    "IPv6": false,
+    "Country": "TW",
+    "Org": "Sky Digital Co., Ltd.",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "138997",
+    "IPv4": true,
+    "IPv6": false,
+    "Country": "HK",
+    "Org": "Eons Data Communications Limited",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "140362",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "LinusCloud Network",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "207468",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "DE",
+    "Org": "Li-Heng Yu",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "207469",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "DE",
+    "Org": "Sung-Yu Li",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "211132",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Ting Shiuan Guan",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "211323",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "UK",
+    "Org": "MrSheepNET LTD",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "212057",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Yung-Hsiang Wei",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "212331",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Ta-Li Lai",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "212357",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Hung Yun Tseng",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "212358",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "WeiXuan Chang",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "212359",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Ming-Ray Hsu",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "212360",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Jimmy Pan",
+    "Status": "Connected",
+    "MANRS": false
+  }
+]
