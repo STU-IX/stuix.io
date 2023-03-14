@@ -57,23 +57,9 @@
     <h2>Bronze</h2>
     <div class="sponsor-container bronze">
       <div class="sponsor">
-        <img src="/img/sponsor/Metropolis.png" />
-        <div class="name">
-          <div class="en">Metropolis Networks Inc.</div>
-          <!-- <div class="zh" style="opicity: 0">_</div> -->
-        </div>
-      </div>
-      <div class="sponsor">
         <img src="/img/sponsor/Muilties.png" />
         <div class="name">
           <div class="en">Muilties Network</div>
-          <!-- <div class="zh" style="opicity: 0">_</div> -->
-        </div>
-      </div>
-      <div class="sponsor">
-        <img src="/img/sponsor/Skywolf.png" />
-        <div class="name">
-          <div class="en">Skywolf Technology</div>
           <!-- <div class="zh" style="opicity: 0">_</div> -->
         </div>
       </div>
