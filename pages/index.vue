@@ -1,26 +1,31 @@
-<template lang="pug">
-.index-container
-	.container
-		.home-about
-			.content
-				p Student &amp; Technology United Internet Exchanges
-				p A community-based Internet Exchanges
-				p 
-					a(href="https://ixpm.stuix.io") Traffic &amp; Status (IXP Manager)
-
-			.image-box
-				img.server(src="/img/server.jpg", width="256px")
-				img.logo(
-					src="//raw.githubusercontent.com/STU-IX/branding/main/Logo/Logo.svg",
-					width="128px"
-				)
-	.join-info
-		.container
-			.content
-				h3 Join STUIX!
-				//div blah blah blah
-			.join-button
-				b-button(to="/join", block) Join
+<template>
+  <div class="index-container">
+    <div class="container">
+      <div class="home-about">
+        <div class="content">
+          p Student &amp; Technology United Internet Exchanges
+          p A community-based Internet Exchanges
+          p
+          <a href="https://ixpm.stuix.io">Traffic &amp; Status (IXP Manager)</a>
+        </div>div class="image-box"
+        <img class="server" src="/img/server.jpg" width="256px" />
+        <img
+          class="logo"
+          src="//raw.githubusercontent.com/STU-IX/branding/main/Logo/Logo.svg"
+          width="128px"
+        />
+      </div>
+    </div>
+    <div class="join-info">
+      <div class="container">
+        <div class="content">
+          h3 Join STUIX!
+          <!--div blah blah blah-->
+        </div>
+        <div class="join-button">b-button to="/join" block="block" Join</div>
+      </div>
+    </div>
+  </div>
 </template>
 <style lang="sass" scoped>
 .index-container
@@ -89,16 +94,16 @@
 </style>
 <script>
 export default {
-	layout: ({ layout }) => layout,
-	data() {
-		return {
-			page: '/',
-			title: 'Home'
-		}
-	},
-	mounted() {
-		this.$store.commit('updatePage', this.page)
-		this.$store.commit('updateTitle', this.title)
-	}
+  layout: ({ layout }) => layout,
+  data() {
+    return {
+      page: '/',
+      title: 'Home'
+    }
+  },
+  mounted() {
+    this.$store.commit('updatePage', this.page)
+    this.$store.commit('updateTitle', this.title)
+  }
 }
 </script>
