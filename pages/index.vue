@@ -3,26 +3,31 @@
     <div class="container">
       <div class="home-about">
         <div class="content">
-          p Student &amp; Technology United Internet Exchanges
-          p A community-based Internet Exchanges
-          p
-          <a href="https://ixpm.stuix.io">Traffic &amp; Status (IXP Manager)</a>
-        </div>div class="image-box"
-        <img class="server" src="/img/server.jpg" width="256px" />
-        <img
-          class="logo"
-          src="//raw.githubusercontent.com/STU-IX/branding/main/Logo/Logo.svg"
-          width="128px"
-        />
+          <p>Student& Technology United Internet Exchanges</p>
+          <p>A community-based Internet Exchanges</p>
+          <p>
+            <a href="https://ixpm.stuix.io">Traffic &amp; Status (IXP Manager)</a>
+          </p>
+        </div>
+        <div class="image-box">
+          <img class="server" src="/img/server.jpg" width="256px" />
+          <img
+            class="logo"
+            src="//raw.githubusercontent.com/STU-IX/branding/main/Logo/Logo.svg"
+            width="128px"
+          />
+        </div>
       </div>
     </div>
     <div class="join-info">
       <div class="container">
         <div class="content">
-          h3 Join STUIX!
+          <h3>Join STUIX!</h3>
           <!--div blah blah blah-->
         </div>
-        <div class="join-button">b-button to="/join" block="block" Join</div>
+        <div class="join-button">
+          <b-button to="/join" block="block">Join</b-button>
+        </div>
       </div>
     </div>
   </div>
