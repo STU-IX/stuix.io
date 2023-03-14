@@ -45,6 +45,13 @@
           <div class="zh">億安數據通信有限公司</div>
         </div>
       </div>
+      <div class="sponsor">
+        <img src="/img/sponsor/Akari.png" />
+        <div class="name">
+          <div class="en">Akari Networks Limited</div>
+          <!-- <div class="zh">_</div> -->
+        </div>
+      </div>
     </div>
 
     <h2>Bronze</h2>
@@ -53,6 +60,13 @@
         <img src="/img/sponsor/Metropolis.png" />
         <div class="name">
           <div class="en">Metropolis Networks Inc.</div>
+          <!-- <div class="zh" style="opicity: 0">_</div> -->
+        </div>
+      </div>
+      <div class="sponsor">
+        <img src="/img/sponsor/Muilties.png" />
+        <div class="name">
+          <div class="en">Muilties Network</div>
           <!-- <div class="zh" style="opicity: 0">_</div> -->
         </div>
       </div>
