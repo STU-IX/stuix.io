@@ -63,6 +63,13 @@
           <!-- <div class="zh" style="opicity: 0">_</div> -->
         </div>
       </div>
+      <div class="sponsor">
+        <img src="/img/sponsor/hatsnet.png" />
+        <div class="name">
+          <div class="en">Hats Network Inc.</div>
+          <!-- <div class="zh" style="opicity: 0">_</div> -->
+        </div>
+      </div>
     </div>
   </div>
 </template>
