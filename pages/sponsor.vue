@@ -20,6 +20,13 @@
           <div class="zh">天空數位有限公司</div>
         </div>
       </div>
+      <div class="sponsor">
+        <img src="/img/sponsor/misaka.png" />
+        <div class="name">
+          <div class="en">Misaka Network, Inc.</div>
+          <div class="zh"></div>
+        </div>
+      </div>
     </div>
 
     <h2>Silver</h2>
