@@ -27,6 +27,13 @@
           <div class="zh"></div>
         </div>
       </div>
+      <div class="sponsor">
+        <img src="/img/sponsor/pni.png" />
+        <div class="name">
+          <div class="en">PITTQIAO NETWORK</div>
+          <div class="zh">彼得巧網路資訊股份有限公司</div>
+        </div>
+      </div>
     </div>
 
     <h2>Silver</h2>
