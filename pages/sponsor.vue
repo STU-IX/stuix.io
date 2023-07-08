@@ -63,7 +63,14 @@
         <img src="/img/sponsor/Akari.png" />
         <div class="name">
           <div class="en">Akari Networks Limited</div>
-          <!-- <div class="zh">_</div> -->
+          <div class="zh" style="opacity: 0 ;">_</div>
+        </div>
+      </div>
+      <div class="sponsor">
+        <img src="/img/sponsor/mercycat.png" />
+        <div class="name">
+          <div class="en">Mercycat Network</div>
+          <div class="zh" style="opacity: 0 ;">_</div>
         </div>
       </div>
     </div>
