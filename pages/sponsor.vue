@@ -24,7 +24,7 @@
         <img src="/img/sponsor/misaka.png" />
         <div class="name">
           <div class="en">Misaka Network, Inc.</div>
-          <div class="zh"></div>
+          <div class="zh" style="opacity: 0 ;">_</div>
         </div>
       </div>
       <div class="sponsor">
@@ -116,6 +116,19 @@ h2
     grid-template-columns: repeat(3, 1fr)
     .sponsor
       border-bottom: 4px solid #f8dba4
+  &.platinum,&.silver,&.gold
+    .sponsor
+      img
+        aspect-ratio: 3/1
+        object-fit: contain
+        object-position: center
+        margin: 30px 0
+  &.bronze
+    .sponsor
+      img
+        aspect-ratio: 12/5
+        object-fit: contain
+        margin: 15px 0
   &.silver,&.bronze
     font-size: 0.75rem
   @media (max-width: 768px)
@@ -131,7 +144,6 @@ h2
     position: relative
     display: flex
     flex-direction: column
-    justify-content: center
     align-items: center
     &::before
       content: ''
@@ -166,13 +178,13 @@ export default {
   layout: ({ layout }) => layout,
   data() {
     return {
-      page: '/sponsor/',
-      title: 'Sponsor'
-    }
+      page: "/sponsor/",
+      title: "Sponsor"
+    };
   },
   mounted() {
-    this.$store.commit('updatePage', this.page)
-    this.$store.commit('updateTitle', this.title)
+    this.$store.commit("updatePage", this.page);
+    this.$store.commit("updateTitle", this.title);
   }
-}
+};
 </script>
