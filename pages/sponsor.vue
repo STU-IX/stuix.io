@@ -91,6 +91,13 @@
           <!-- <div class="zh" style="opicity: 0">_</div> -->
         </div>
       </div>
+      <div class="sponsor">
+        <img src="/img/sponsor/daoport.png" />
+        <div class="name">
+          <div class="en">DAOport Network</div>
+          <!-- <div class="zh" style="opicity: 0">_</div> -->
+        </div>
+      </div>
     </div>
   </div>
 </template>
