@@ -1,0 +1,821 @@
+[
+  {
+    "ASN": "42",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "US",
+    "Org": "Packet Clearing House",
+    "Status": "Provisioning",
+    "MANRS": false
+  },
+  {
+    "ASN": "112",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "Global",
+    "Org": "AS112 Project",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "917",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "US",
+    "Org": "Misaka Network, Inc.",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "945",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "US",
+    "Org": "August Internet",
+    "Status": "Connected",
+    "MANRS": true
+  },
+  {
+    "ASN": "983",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "US",
+    "Org": "Akari Networks",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "3856",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "US",
+    "Org": "Packet Clearing House",
+    "Status": "Provisioning",
+    "MANRS": false
+  },
+  {
+    "ASN": "6939",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "US",
+    "Org": "Hurricane Electric LLC",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "7480",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Tsung-Yi Yu",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "13335",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "US",
+    "Org": "Cloudflare, Inc",
+    "Status": "Connected",
+    "MANRS": true
+  },
+  {
+    "ASN": "14874",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "US",
+    "Org": "PITTQIAO LLC",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "15169",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "US",
+    "Org": "Google LLC",
+    "Status": "Connected",
+    "MANRS": true
+  },
+  {
+    "ASN": "16509",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "US",
+    "Org": "Amazon Web Services",
+    "Status": "Connected",
+    "MANRS": true
+  },
+  {
+    "ASN": "17415",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "MingYi Tea Farm",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "18041",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Taiwan Digital Streaming Co. Transit",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "18178",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Pittqiao Network Information Co.,Ltd.",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "18423",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "RAID Networks Co., Ltd.",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "35384",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "UK",
+    "Org": "DAOport Infrastructures",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "38047",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Advanced Information Co.",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "38254",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Pang-Wei Tsai",
+    "Status": "Connected",
+    "MANRS": true
+  },
+  {
+    "ASN": "38852",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Fun Finance Technology Co., Ltd.",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "38856",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Walks Cloud Inc.",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "48024",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "GB",
+    "Org": "NeroCloud",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "48231",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "US",
+    "Org": "CRE Network, LLC",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "50118",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "AI",
+    "Org": "Caribbean Telecom S.A",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "51019",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "IS",
+    "Org": "Kjartan Hrafnkelsson",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "54625",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "CA",
+    "Org": "Kudos Studio",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "57406",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "NL",
+    "Org": "Zero Distance LLC",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "60326",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "UK",
+    "Org": "MrSheepNET AS60326",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "60539",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "HK",
+    "Org": "Huicast Telecom Limited",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "61228",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "UK",
+    "Org": "BGP NETWORKS LLC",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "61302",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "CN",
+    "Org": "Huize Telecom",
+    "Status": "Connected",
+    "MANRS": true
+  },
+  {
+    "ASN": "63800",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "JP",
+    "Org": "SERVER-G Group",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "131149",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Yuan-Jhen Info., Co., Ltd",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "131171",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "CN",
+    "Org": "Everlife Networks",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "131642",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Pittqiao Network Information Co.,Ltd.",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "131657",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Fast Line",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "131658",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Game Soul Technology Co., Ltd.",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "133456",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "SG",
+    "Org": "ALAGAS NETWORK PTE. LTD.",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "134823",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Sky Digital Co., Ltd.",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "135395",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "HK",
+    "Org": "Hertz Global Network",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "138211",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "CN",
+    "Org": "MoeQing Network Service",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "138997",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "HK",
+    "Org": "Eons Data Communications Limited",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "139247",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "CN",
+    "Org": "PPPWAW Network",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "140731",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "CN",
+    "Org": "TOHU Public Internet",
+    "Status": "Connected",
+    "MANRS": true
+  },
+  {
+    "ASN": "141237",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "HK",
+    "Org": "Moecast Network",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "142280",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "CN",
+    "Org": "NTEREN",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "142553",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "CN",
+    "Org": "Airs Project Private Network Main",
+    "Status": "Connected",
+    "MANRS": true
+  },
+  {
+    "ASN": "142641",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "HK",
+    "Org": "Yuze Zhang",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "147028",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "HK",
+    "Org": "Okita Online",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "147039",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "MV",
+    "Org": "Cyprea Private Limited",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "149423",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Yu-Shan Tsai",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "149791",
+    "IPv4": true,
+    "IPv6": false,
+    "Country": "TW",
+    "Org": "StarVerse Network Ltd.",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "150173",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "HK",
+    "Org": "PoloCloud Computing (Hong Kong) Limited",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "151187",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "CN",
+    "Org": "Shen Jiale",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "151188",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "404 Network Information Co.",
+    "Status": "Connected",
+    "MANRS": true
+  },
+  {
+    "ASN": "151338",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": " HK",
+    "Org": "POLONETWORK LIMITED",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "197860",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "GB",
+    "Org": "Haruka Hosting Ltd",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "198304",
+    "IPv4": false,
+    "IPv6": false,
+    "Country": "CN",
+    "Org": "Pigeon Network",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "199632",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "US",
+    "Org": "Decima LLC",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "199688",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "GB",
+    "Org": "HuajiTech Ltd",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "200213",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Baihe Food Factory",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "201217",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "US",
+    "Org": "RADISHCLOUD TECHNOLOGY LLC",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "201801",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "US",
+    "Org": "PoloCloud Computing (United States) LLC",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "202525",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": " TW",
+    "Org": "Chun Ming Ou",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "202776",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "GB",
+    "Org": "Moeclub Network",
+    "Status": "Connected",
+    "MANRS": true
+  },
+  {
+    "ASN": "202820",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": " TW",
+    "Org": "Chih-Jen CHENG",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "202939",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "GB",
+    "Org": "Chimon Technology Ltd",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "203023",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "CN",
+    "Org": "Kawaii Networks",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "203283",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "US",
+    "Org": "HighEndNetwork LLC",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "203314",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "GE",
+    "Org": "HATS NETWORK INC.",
+    "Status": "Connected",
+    "MANRS": true
+  },
+  {
+    "ASN": "203423",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "NL",
+    "Org": "FISHPORT NETWORK INC.",
+    "Status": "Connected",
+    "MANRS": true
+  },
+  {
+    "ASN": "203843",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "WANG,XING-KAI",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "204677",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Sky Digital Co., Ltd.",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "204844",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "UK",
+    "Org": "NCSE Network Ltd",
+    "Status": "Connected",
+    "MANRS": true
+  },
+  {
+    "ASN": "205329",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Muilties Network",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "205603",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "CN",
+    "Org": "Wolf Network Lab",
+    "Status": "Connected",
+    "MANRS": true
+  },
+  {
+    "ASN": "206003",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "SG",
+    "Org": "HISEVEN PTE. LTD.",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "207468",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "DE",
+    "Org": "Li-Heng Yu",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "207469",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "DE",
+    "Org": "Sung-Yu Li",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "207705",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Jyun-Kai Hu",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "209391",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "GB",
+    "Org": "Suse Technology Limited",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "210528",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Chun-Hung Yang",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "210932",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Chess Network Services",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "211132",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Ting Shiuan Guan",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "211323",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "UK",
+    "Org": "MrSheepNET LTD",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "211571",
+    "IPv4": false,
+    "IPv6": true,
+    "Country": "UK",
+    "Org": "Xin Zhao Network",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "211946",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "US",
+    "Org": "Saltandfish LLC",
+    "Status": "Connected",
+    "MANRS": true
+  },
+  {
+    "ASN": "212331",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Ta-Li Lai",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "212357",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Hung Yun Tseng",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "212358",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "WeiXuan Chang",
+    "Status": "Connected",
+    "MANRS": false
+  },
+  {
+    "ASN": "212360",
+    "IPv4": true,
+    "IPv6": true,
+    "Country": "TW",
+    "Org": "Jimmy Pan",
+    "Status": "Connected",
+    "MANRS": false
+  }
+]
