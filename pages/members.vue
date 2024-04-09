@@ -1,12 +1,6 @@
 <template>
   <div id="members-container" class="container">
     <b-table borderless striped :items="members" :fields="fields">
-      <template #cell(IPv4)="data">
-        <span v-show="data.value">✓</span>
-      </template>
-      <template #cell(IPv6)="data">
-        <span v-show="data.value">✓</span>
-      </template>
       <template #cell(Org)="data">
         <span>{{ data.value }} <a v-show="data.item.MANRS" class="tag" href="https://www.manrs.org/" target="_blank">MANRS</a></span>
       </template>
@@ -24,7 +18,7 @@ export default {
       page: '/members/',
       title: 'Members',
       members: m,
-      fields: ['ASN', 'IPv4', 'IPv6', 'Country', 'Org', 'Status']
+      fields: ['ASN', 'Country', 'Org', 'Status']
     }
   },
   mounted() {
