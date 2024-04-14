@@ -5,7 +5,7 @@
 
 An IX (Internet Exchange) allows networks to interconnect on an open-access ethernet fabric -- providing low-latency, high-bandwidth, cost-effectively, in a locale.
 
-## Where is STUIX?
+## What is STUIX?
 Student & Technology United Internet Exchanges is a non-profit IX (Internet Exchange) for educational purposes.
 
 PeeringDB: [Student & Technology United Internet Exchanges](https://www.peeringdb.com/ix/3352)
