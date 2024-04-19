@@ -34,6 +34,13 @@
           <div class="zh">彼得巧網路資訊股份有限公司</div>
         </div>
       </div>
+      <div class="sponsor">
+        <img src="/img/sponsor/FastLine.png" />
+        <div class="name">
+          <div class="en">Fast Line</div>
+          <div class="zh">台灣速連</div>
+        </div>
+      </div>
     </div>
 
     <h2>Silver</h2>
@@ -43,13 +50,6 @@
         <div class="name">
           <div class="en">Taiwan Digital Streaming Co.</div>
           <div class="zh">台灣數位串流有限公司</div>
-        </div>
-      </div>
-      <div class="sponsor">
-        <img src="/img/sponsor/FastLine.png" />
-        <div class="name">
-          <div class="en">Fast Line</div>
-          <div class="zh">台灣速連</div>
         </div>
       </div>
       <div class="sponsor">
