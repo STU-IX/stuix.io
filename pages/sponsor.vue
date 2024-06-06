@@ -21,13 +21,6 @@
         </div>
       </div>
       <div class="sponsor">
-        <img src="/img/sponsor/ctcsci.png" />
-        <div class="name">
-          <div class="en">CTCSCI TECH LIMITED</div>
-          <div class="zh" style="opacity: 0 ;">_</div>
-        </div>
-      </div>
-      <div class="sponsor">
         <img src="/img/sponsor/pni.png" />
         <div class="name">
           <div class="en">PITTQIAO NETWORK</div>
