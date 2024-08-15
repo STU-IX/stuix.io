@@ -92,6 +92,13 @@
         </div>
       </div>
     </div>
+
+    <h2>Personal</h2>
+    <div class="sponsor-container bronze">
+      <span v-for="sponsor of sponsors" :key="sponsor" class="sponsor">
+        {{ sponsor }}
+      </span>
+    </div>
   </div>
 </template>
 <style lang="sass" scoped>
@@ -174,12 +181,14 @@ h2
     border: 1px solid rgba(0, 0, 0, 0.05)
 </style>
 <script>
+import sponsors from "@/static/data/stuix-sponsors.json";
 export default {
   layout: ({ layout }) => layout,
   data() {
     return {
       page: "/sponsor/",
-      title: "Sponsor"
+      title: "Sponsor",
+      sponsors
     };
   },
   mounted() {

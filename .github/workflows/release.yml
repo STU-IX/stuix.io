@@ -48,6 +48,8 @@ jobs:
         GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
         SHEET_ID: ${{ secrets.SHEET_ID }}
+    - name: Download Sponsors File
+      run: curl -o ./static/data/stuix-sponsors.json https://mirror.twds.com.tw/stuix-sponsors.json
     - name: Generate Pages
       env:
         GO111MODULE: on

@@ -88,3 +88,4 @@ sw.*
 
 # Vim swap files
 *.swp
+static/data/stuix-sponsors.json
