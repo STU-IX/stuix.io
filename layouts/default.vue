@@ -1,6 +1,6 @@
 <template>
   <div class="app" v-konami="konami" :key="$store.state.win95">
-    <b-navbar toggleable="lg">
+    <b-navbar toggleable="md">
       <div class="container">
         <b-navbar-brand to="/">STUIX</b-navbar-brand>
 
