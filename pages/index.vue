@@ -6,7 +6,9 @@
           <p>Student& Technology United Internet Exchanges</p>
           <p>A community-based Internet Exchanges</p>
           <p>
-            <a href="https://ixpm.stuix.io">Traffic &amp; Status (IXP Manager)</a>
+            <a href="https://ixpm.stuix.io">
+              Traffic &amp; Status (IXP Manager)
+            </a>
           </p>
         </div>
         <div class="image-box">
@@ -36,7 +38,7 @@
 .index-container
 	display: flex
 	flex-direction: column
-	min-height: calc(var(--vh) * 100 - 56px)
+	min-height: calc(100svh - 56px)
 	.win95 &
 		min-height: initial
 	&>.container
@@ -102,13 +104,13 @@ export default {
   layout: ({ layout }) => layout,
   data() {
     return {
-      page: '/',
-      title: 'Home'
-    }
+      page: "/",
+      title: "Home"
+    };
   },
   mounted() {
-    this.$store.commit('updatePage', this.page)
-    this.$store.commit('updateTitle', this.title)
+    this.$store.commit("updatePage", this.page);
+    this.$store.commit("updateTitle", this.title);
   }
-}
+};
 </script>

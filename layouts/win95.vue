@@ -1,32 +1,34 @@
 <template>
-	<div class="win95">
-		<header>
-			<h1>STUIX</h1>
-			<p>Wow such a non-profit IX</p>
-		</header>
-		<div id="content">
-			<hr />
-			<div id="nav">
-				<router-link v-for="(item, i) in items" :key="i" :to="item.to">
-					<button :class="($store.state.page == item.to ? 'active' : '')">{{ item.title }}</button>
-				</router-link>
-			</div>
-			<hr />
-			<div class="window">
-				<div class="title-bar">
-					<div class="title-bar-text">{{ $store.state.title }}</div>
-					<div class="title-bar-controls">
-						<button aria-label="Minimize"></button>
-						<button aria-label="Maximize"></button>
-						<button aria-label="Close"></button>
-					</div>
-				</div>
-				<div class="window-body">
-					<nuxt />
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="win95">
+    <header>
+      <h1>STUIX</h1>
+      <p>Wow such a non-profit IX</p>
+    </header>
+    <div id="content">
+      <hr />
+      <div id="nav">
+        <router-link v-for="(item, i) in items" :key="i" :to="item.to">
+          <button :class="$store.state.page == item.to ? 'active' : ''">
+            {{ item.title }}
+          </button>
+        </router-link>
+      </div>
+      <hr />
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">{{ $store.state.title }}</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <nuxt />
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 <style lang="sass">
 @font-face
@@ -111,43 +113,49 @@ body.win95theme
 			background: url(/img/background.jpg)
 </style>
 <script>
-import 'assets/index.sass'
+import "assets/index.sass";
 
 export default {
-	data() {
-		return {
-			items: [
-				{
-					title: 'Home',
-					to: '/'
-				},
-				{
-					title: 'About',
-					to: '/about/'
-				},
-				{
-					title: 'Join',
-					to: '/join/'
-				},
-				{
-					title: 'Members',
-					to: '/members/'
-				},
-				{
-					title: 'Sponsor',
-					to: '/sponsor/'
-				}
-			]
-		}
-	},
-	mounted() {
-		console.log(`
+  data() {
+    return {
+      items: [
+        {
+          title: "Home",
+          to: "/"
+        },
+        {
+          title: "About",
+          to: "/about/"
+        },
+        {
+          title: "Join",
+          to: "/join/"
+        },
+        {
+          title: "Members",
+          to: "/members/"
+        },
+        {
+          title: "Sponsor",
+          to: "/sponsor/"
+        },
+        {
+          title: "Technical Guide",
+          to: "/technical-guide/"
+        }
+      ]
+    };
+  },
+  mounted() {
+    console.log(
+      `
 ███████╗████████╗██╗   ██╗██╗██╗  ██╗
 ██╔════╝╚══██╔══╝██║   ██║██║╚██╗██╔╝
 ███████╗   ██║   ██║   ██║██║ ╚███╔╝
 ╚════██║   ██║   ██║   ██║██║ ██╔██╗
 ███████║   ██║   ╚██████╔╝██║██╔╝ ██╗
-╚══════╝   ╚═╝    ╚═════╝ ╚═╝╚═╝  ╚═╝`.trim())
-	}
-}
+╚══════╝   ╚═╝    ╚═════╝ ╚═╝╚═╝  ╚═╝`.trim()
+    );
+  }
+};
 </script>
