@@ -98,6 +98,13 @@
           <!-- <div class="zh" style="opicity: 0">_</div> -->
         </div>
       </div>
+      <div class="sponsor">
+        <img src="/img/sponsor/simple.png" />
+        <div class="name">
+          <div class="en">Simple Information, Inc.</div>
+          <div class="zh">簡單資訊有限公司</div>
+        </div>
+      </div>
     </div>
 
     <h2>Personal</h2>
