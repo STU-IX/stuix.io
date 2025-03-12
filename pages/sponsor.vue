@@ -105,6 +105,13 @@
           <div class="zh">簡單資訊有限公司</div>
         </div>
       </div>
+      <div class="sponsor">
+        <img src="/img/sponsor/lazco.png" />
+        <div class="name">
+          <div class="en">LAZCO STUDIO LTD</div>
+          <div class="zh" style="opacity: 0 ;">_</div>
+        </div>
+      </div>
     </div>
 
     <h2>Personal</h2>
