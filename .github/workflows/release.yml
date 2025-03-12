@@ -13,7 +13,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         submodules: true
     - name: Setup Hugo
@@ -22,9 +22,10 @@ jobs:
         hugo-version: 'latest'
         extended: true
     - name: Setup Node
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
-        node-version: '12.x'
+        node-version: '20.x'
+        cache: 'npm'
     - name: Install jq
       run: sudo apt-get install -y jq
     - uses: actions/cache@v4
@@ -33,8 +34,8 @@ jobs:
         key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
         restore-keys: |
           ${{ runner.os }}-hugomod-
-    - name: Cache dependencies
-      uses: actions/cache@v1
+    - name: Cache npm dependencies
+      uses: actions/cache@v4
       with:
         path: ~/.npm
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -55,7 +56,7 @@ jobs:
         GO111MODULE: on
       run: npm run generate
     - name: Archive Production Artifact
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@v4
       with:
         name: dist
         path: dist
