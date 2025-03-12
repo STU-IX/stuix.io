@@ -27,7 +27,7 @@ jobs:
         node-version: '12.x'
     - name: Install jq
       run: sudo apt-get install -y jq
-    - uses: actions/cache@v2
+    - uses: actions/cache@v4
       with:
         path: /tmp/hugo_cache
         key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
