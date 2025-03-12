@@ -109,7 +109,7 @@
         <img src="/img/sponsor/lazco.png" />
         <div class="name">
           <div class="en">LAZCO STUDIO LTD</div>
-          <!-- <div class="zh" style="opicity: 0">_</div> -->
+          <div class="zh" style="opacity: 0">_</div>
         </div>
       </div>
     </div>
