@@ -4,7 +4,14 @@
       <h4>Route Server Control Communities</h4>
     </div>
     <div id="rules-container" class="container">
-      <b-table borderless striped :items="bgpCommunityRules"></b-table>
+      <b-table borderless striped :items="rsBGPCommunityRules"></b-table>
+    </div>
+    <div class="container">
+      <h4>Cache Control Communities</h4>
+      <p>Cache services are provided by Taiwan Digital Streaming Co.</p>
+    </div>
+    <div id="rules-container" class="container">
+      <b-table borderless striped :items="cacheBGPCommunityRules"></b-table>
     </div>
   </div>
 </template>
@@ -16,7 +23,7 @@ export default {
     return {
       page: "/technical-guide/",
       title: "Technical Guide",
-      bgpCommunityRules: [
+      rsBGPCommunityRules: [
         {
           description: "Prevent announcement of a prefix to a peer",
           community: "0:peer-as",
@@ -71,6 +78,16 @@ export default {
           description: "Prepend to peer AS three times",
           community: "38855:103:peer-as",
           large: "YES"
+        }
+      ],
+      cacheBGPCommunityRules: [
+        {
+          description: "Opt-out Steam Cache",
+          community: "18041:6667"
+        },
+        {
+          description: "Opt-out Apple Cache",
+          community: "18041:6668"
         }
       ]
     };
