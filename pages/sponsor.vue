@@ -85,13 +85,6 @@
         </div>
       </div>
       <div class="sponsor">
-        <img src="/img/sponsor/nafstorenet.png" />
-        <div class="name">
-          <div class="en">NAFSTORE NET</div>
-          <div class="zh">氟化鈉數位工作室</div>
-        </div>
-      </div>
-      <div class="sponsor">
         <img src="/img/sponsor/cute_panda.png" />
         <div class="name">
           <div class="en">Cute_Panda</div>
