@@ -66,6 +66,20 @@
           <div class="zh" style="opacity: 0 ;">_</div>
         </div>
       </div>
+      <div class="sponsor">
+        <img src="/img/sponsor/yuanjhen.svg" />
+        <div class="name">
+          <div class="en">YUAN JHEN Info. Co. Ltd</div>
+          <div class="zh">遠振資訊股份有限公司</div>
+        </div>
+      </div>
+      <div class="sponsor">
+        <img src="/img/sponsor/baidou.png" />
+        <div class="name">
+          <div class="en" style="opacity: 0 ;">_</div>
+          <div class="zh">北斗數位</div>
+        </div>
+      </div>
     </div>
 
     <h2>Bronze</h2>
