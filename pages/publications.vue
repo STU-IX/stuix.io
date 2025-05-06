@@ -1,7 +1,7 @@
 <template>
   <div class="container publications-page">
     <p class="sub-title">
-      The vault of STUIX wisdom.
+      Publications / Research Topics / Lecture using STUIX related resources.
     </p>
     <div class="pub-layout">
       <p>
