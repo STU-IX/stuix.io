@@ -1,7 +1,7 @@
 <template>
   <div class="container publications-page">
     <p class="sub-title">
-      Publications / Research Topics / Lecture using STUIX related resources.
+      Publications / Research Topics / Lectures using STUIX related resources.
     </p>
     <div class="pub-layout">
       <p>
