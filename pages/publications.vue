@@ -4,6 +4,17 @@
       The vault of STUIX wisdom.
     </p>
     <div class="pub-layout">
+      <p>
+        <a
+          href="https://github.com/STU-IX/stuix.io/blob/main/pages/publications.vue"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Missing a publication, or want to add yours?
+          <span class="external-icon"></span>
+        </a>
+      </p>
+
       <section
         v-if="publications.book && publications.book.length"
         class="publication-section"
@@ -71,6 +82,25 @@
           </li>
         </ul>
       </section>
+
+      <section class="publication-section research-partners-section">
+        <h2>Research Partner</h2>
+        <div v-if="researchPartners.length" class="research-partner-container">
+          <div
+            v-for="partner in researchPartners"
+            :key="partner.id"
+            class="partner-logo-item"
+          >
+            <img
+              :src="partner.imgSrc"
+              :alt="partner.name || 'Research Partner Logo'"
+            />
+            <div v-if="partner.name" class="partner-name">
+              {{ partner.name }}
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -91,21 +121,21 @@ export default {
             title: "榮勾斯揪的皇家蜂蜜學：從 Kira Kira 到 KUSO 品嚐法",
             authors: "國王熊熊（SKOG）, 蜜蜂侍衛長",
             publisher: "出版：閃閃蜂窩城堡皇家出版社, 2024 年，怕的是他。",
-            url: "#榮勾斯揪的書1" // Placeholder
+            url: "#榮勾斯揪的書1"
           },
           {
             title: "蓋被被曬太陽：榮勾斯揪的 LKK 哲學 (安安版)",
             authors: "榮勾（著）, 勝勝（被被提供者）",
             publisher: "出版：懶洋洋出版社, 2023 年，你很奇欸。",
-            url: "#榮勾斯揪的書2" // Placeholder
+            url: "#榮勾斯揪的書2"
           },
           {
             title: "告老師！那些關於偶的 Hito 故事",
             authors: "斯勾（口述）, 某不具名蜜蜂（筆錄）",
             publisher: "出版：KUSO 文學社, 不詳年份，哇賽！",
             doiText: "[je ne sais quoi]",
-            doiUrl: "#榮勾斯揪的書3_doi", // Placeholder
-            url: "#榮勾斯揪的書3" // Placeholder
+            doiUrl: "#榮勾斯揪的書3_doi",
+            url: "#榮勾斯揪的書3"
           }
         ],
         networking: [
@@ -113,25 +143,42 @@ export default {
             title: "皇家低調奢華感的網路架構：專為國王熊熊設計",
             authors: "榮勾斯揪, 蜜蜂網路工程大臣",
             conference: "第一屆熊熊網際網路研討會（Binternet '24），挖哩咧！",
-            url: "#榮勾斯揪的網1" // Placeholder
+            url: "#榮勾斯揪的網1"
           },
           {
             title: "Zzz ～怕的是我～ Zzz：一種新型態網路睡眠協定",
             authors: "SKOG, 粉口愛研究員A, 粉口愛研究員B",
             details: "2024 年 3 月，醬子就很ㄅㄧㄤˋ了。",
             arxivText: "arXiv 預印本 (LDS 版)",
-            arxivUrl: "#榮勾斯揪的網2_arxiv", // Placeholder
-            url: "#榮勾斯揪的網2" // Placeholder
+            arxivUrl: "#榮勾斯揪的網2_arxiv",
+            url: "#榮勾斯揪的網2"
           },
           {
             title: "蜂蜜王國的網路安全：如何防止 SPP 攻擊",
             authors: "國王熊熊, 皇家資安蜜蜂團隊",
             conference:
               "Kira Kira 安全技術峰會 (KKSec '23)，ㄘㄟˊ，那些很遜的駭客。",
-            url: "#榮勾斯揪的網3" // Placeholder
+            url: "#榮勾斯揪的網3"
           }
         ]
-      }
+      },
+      researchPartners: [
+        {
+          id: "skog1",
+          name: "榮勾斯揪 KUSO 研究院",
+          imgSrc: "/img/sponsor/skog.webp"
+        },
+        {
+          id: "skog2",
+          name: "皇家蜂蜜 Hito 實驗室",
+          imgSrc: "/img/sponsor/skog.webp"
+        },
+        {
+          id: "skog_no_name",
+          name: "神秘的榮勾斯揪夥伴",
+          imgSrc: "/img/sponsor/skog.webp"
+        }
+      ]
     };
   },
   head() {
@@ -173,22 +220,15 @@ $primary-blue: #007bff
     text-align: left
 
 .pub-layout
-  // display: flex // Removed for single-column layout
-  // gap: 2.5rem // Removed
-
-  // Styles for former sidebar content, now direct children of .pub-layout
-  p.eyebrow
-    color: $primary-blue
-    text-transform: uppercase
-    font-size: 0.9rem
-    font-weight: bold
-    margin-bottom: 0.5rem
-  h1
-    font-size: 2.8rem
-    font-weight: 700
-    line-height: 1.2
-    margin-bottom: 1.5rem
   // Specific styling for the "Missing a publication..." link
+  > p:first-child
+    text-align: center
+    margin-bottom: 2rem
+    margin-top: -1rem
+
+    .win95 &
+      text-align: left
+
   > p > a
     color: $primary-blue
     text-decoration: none
@@ -236,33 +276,76 @@ $primary-blue: #007bff
       color: #555
       line-height: 1.6
       margin-bottom: 0.25rem
-      &.authors
-        // font-style: italic // Optional: if you want to emphasize authors
       &.publisher, &.conference, &.details
         font-size: 0.9rem
       a.doi-link, a.arxiv-link
         margin-left: 0.5em
-        // font-weight: normal // Optional: if you prefer non-bold links here
 
 // Responsive adjustments
 @media (max-width: 768px)
-  .pub-layout
-    // flex-direction: column // No longer flex
-    h1 // Adjust h1 size for smaller screens (moved from old sidebar specific rule)
-      font-size: 2.2rem
-    // Removed __sidebar and __main specific responsive rules.
-
   .publication-section:first-of-type
-    margin-top: 2rem // Add some space between header content and first section on small screens
+    margin-top: 2rem
 
 // Windows 95 theme adjustments
 :global(body.win95theme .publications-page)
-  .pub-layout // Styles for content formerly in sidebar
-    p.eyebrow, > p > a // Target specific elements
+  .pub-layout
+    > p > a
       color: blue
-    // .external-icon might need specific styling for W95 if the default SVG is not desired
 
   .publication-section
     h2
       border-bottom-color: silver
+
+
+.research-partner-container
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+  grid-gap: 16px
+  margin-top: 1rem
+  margin-bottom: 16px
+
+  .win95 &
+    background-color: transparent
+
+.partner-logo-item
+  background-color: rgba(0, 0, 0, 0.05)
+  border-radius: 4px
+  padding: 8px 4px
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  text-align: center
+
+  img
+    width: 75%
+    aspect-ratio: 3/1
+    object-fit: contain
+    object-position: center
+    margin: 15px 0
+
+  .partner-name
+    font-size: 0.85rem
+    color: #333
+    padding: 4px
+    line-height: 1.2
+    width: 100%
+
+  .win95 &
+    background: #fff
+    border-radius: 0
+    box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a
+    padding: 8px 4px
+
+    img
+      margin: 15px 0
+
+    .partner-name
+      color: #000000
+      background-color: transparent
+
+@media (max-width: 768px)
+  .research-partner-container
+    // All previous commented lines inside this block are to be removed.
+    // This block might become empty if no other rules exist.
 </style>
