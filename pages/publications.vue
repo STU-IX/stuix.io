@@ -83,9 +83,9 @@
         </ul>
       </section>
 
-      <section class="publication-section partners-section">
+      <section v-if="researchPartners.length" class="publication-section partners-section">
         <h2>Research Partner</h2>
-        <div v-if="researchPartners.length" class="partner-container">
+        <div class="partner-container">
           <div
             v-for="partner in researchPartners"
             :key="partner.id"
@@ -102,9 +102,9 @@
         </div>
       </section>
 
-      <section class="publication-section partners-section">
+      <section v-if="educationPartners.length" class="publication-section partners-section">
         <h2>Education Partner</h2>
-        <div v-if="educationPartners.length" class="partner-container">
+        <div class="partner-container">
           <div
             v-for="partner in educationPartners"
             :key="partner.id"
