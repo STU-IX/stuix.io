@@ -168,7 +168,13 @@ export default {
             title: "From Spoofing to Tunneling: New Red Team Networking Skills for Initial Access, Evasion and Domain Compromise",
             authors: "Shu-Hao, Tung",
             publisher: "Ongoing Research",
-            tags: ["Security"],
+            tags: ["Security", "Tunneling"]
+          },
+          {
+            title: "從 Segment Routing 往回看，Tunnel Injection 一招讓你內網看光光",
+            authors: "Yu-Shan, Tsai",
+            publisher: "Ongoing Research",
+            tags: ["Security", "Tunneling"]
           }
         ],
         lecture: [
