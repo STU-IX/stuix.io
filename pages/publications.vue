@@ -298,7 +298,7 @@ export default {
           id: "scaict",
           name: "SCAICT 中部高中電資社團聯合會議",
           imgSrc: "/img/pub/scaict.svg"
-        }
+        },
         {
           id: "thjcc",
           name: "THJCC CTF 臺灣高中資安聯合競賽",
