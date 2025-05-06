@@ -16,6 +16,50 @@
       </p>
 
       <section
+        v-if="educationPartners.length"
+        class="publication-section partners-section"
+      >
+        <h2>Education Partner</h2>
+        <div class="partner-container">
+          <div
+            v-for="partner in educationPartners"
+            :key="partner.id"
+            class="partner-logo-item"
+          >
+            <img
+              :src="partner.imgSrc"
+              :alt="partner.name || 'Education Partner Logo'"
+            />
+            <div v-if="partner.name" class="partner-name">
+              {{ partner.name }}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        v-if="researchPartners.length"
+        class="publication-section partners-section"
+      >
+        <h2>Research Partner</h2>
+        <div class="partner-container">
+          <div
+            v-for="partner in researchPartners"
+            :key="partner.id"
+            class="partner-logo-item"
+          >
+            <img
+              :src="partner.imgSrc"
+              :alt="partner.name || 'Research Partner Logo'"
+            />
+            <div v-if="partner.name" class="partner-name">
+              {{ partner.name }}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
         v-if="publications.researchTopic && publications.researchTopic.length"
         class="publication-section"
       >
@@ -103,50 +147,6 @@
             </p>
           </li>
         </ul>
-      </section>
-
-      <section
-        v-if="researchPartners.length"
-        class="publication-section partners-section"
-      >
-        <h2>Research Partner</h2>
-        <div class="partner-container">
-          <div
-            v-for="partner in researchPartners"
-            :key="partner.id"
-            class="partner-logo-item"
-          >
-            <img
-              :src="partner.imgSrc"
-              :alt="partner.name || 'Research Partner Logo'"
-            />
-            <div v-if="partner.name" class="partner-name">
-              {{ partner.name }}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        v-if="educationPartners.length"
-        class="publication-section partners-section"
-      >
-        <h2>Education Partner</h2>
-        <div class="partner-container">
-          <div
-            v-for="partner in educationPartners"
-            :key="partner.id"
-            class="partner-logo-item"
-          >
-            <img
-              :src="partner.imgSrc"
-              :alt="partner.name || 'Education Partner Logo'"
-            />
-            <div v-if="partner.name" class="partner-name">
-              {{ partner.name }}
-            </div>
-          </div>
-        </div>
       </section>
     </div>
   </div>
