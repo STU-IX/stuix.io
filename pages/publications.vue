@@ -21,7 +21,10 @@
       >
         <h2>Research Topic</h2>
         <ul class="publication-list">
-          <li v-for="(item, index) in publications.researchTopic" :key="`researchTopic-${index}`">
+          <li
+            v-for="(item, index) in publications.researchTopic"
+            :key="`researchTopic-${index}`"
+          >
             <h3>
               <a
                 :href="item.url || '#'"
@@ -83,7 +86,10 @@
         </ul>
       </section>
 
-      <section v-if="researchPartners.length" class="publication-section partners-section">
+      <section
+        v-if="researchPartners.length"
+        class="publication-section partners-section"
+      >
         <h2>Research Partner</h2>
         <div class="partner-container">
           <div
@@ -102,7 +108,10 @@
         </div>
       </section>
 
-      <section v-if="educationPartners.length" class="publication-section partners-section">
+      <section
+        v-if="educationPartners.length"
+        class="publication-section partners-section"
+      >
         <h2>Education Partner</h2>
         <div class="partner-container">
           <div
@@ -264,6 +273,7 @@ $primary-blue: #007bff
   font-size: 1.5rem
   margin-top: -1rem
   margin-bottom: 1.5rem
+  text-wrap: balance
 
   .win95 &
     margin-top: 1rem
