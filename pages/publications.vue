@@ -16,12 +16,12 @@
       </p>
 
       <section
-        v-if="publications.book && publications.book.length"
+        v-if="publications.researchTopic && publications.researchTopic.length"
         class="publication-section"
       >
-        <h2>Books</h2>
+        <h2>Research Topic</h2>
         <ul class="publication-list">
-          <li v-for="(item, index) in publications.book" :key="`book-${index}`">
+          <li v-for="(item, index) in publications.researchTopic" :key="`researchTopic-${index}`">
             <h3>
               <a
                 :href="item.url || '#'"
@@ -47,14 +47,14 @@
       </section>
 
       <section
-        v-if="publications.networking && publications.networking.length"
+        v-if="publications.lecture && publications.lecture.length"
         class="publication-section"
       >
-        <h2>Networking</h2>
+        <h2>Lecture</h2>
         <ul class="publication-list">
           <li
-            v-for="(item, index) in publications.networking"
-            :key="`networking-${index}`"
+            v-for="(item, index) in publications.lecture"
+            :key="`lecture-${index}`"
           >
             <h3>
               <a
@@ -135,7 +135,7 @@ export default {
       addPublicationUrl:
         "https://github.com/stuix/website/issues/new?assignees=&labels=publication&template=add-publication.md&title=Add+Publication%3A+%5BYour+Publication+Title%5D",
       publications: {
-        book: [
+        researchTopic: [
           {
             title: "榮勾斯揪的皇家蜂蜜學：從 Kira Kira 到 KUSO 品嚐法",
             authors: "國王熊熊（SKOG）, 蜜蜂侍衛長",
@@ -157,7 +157,7 @@ export default {
             url: "#榮勾斯揪的書3"
           }
         ],
-        networking: [
+        lecture: [
           {
             title: "皇家低調奢華感的網路架構：專為國王熊熊設計",
             authors: "榮勾斯揪, 蜜蜂網路工程大臣",
@@ -178,6 +178,20 @@ export default {
             conference:
               "Kira Kira 安全技術峰會 (KKSec '23)，ㄘㄟˊ，那些很遜的駭客。",
             url: "#榮勾斯揪的網3"
+          }
+        ],
+        classes: [
+          {
+            title: "STUIX 網路架構與設計",
+            authors: "國王熊熊, 蜜蜂網路工程大臣",
+            details: "2024 年 3 月，這堂課會讓你變得更聰明！",
+            url: "#榮勾斯揪的課程1"
+          },
+          {
+            title: "STUIX 網路安全與防護",
+            authors: "國王熊熊, 皇家資安蜜蜂團隊",
+            details: "2024 年 3 月，這堂課會讓你變得更聰明！",
+            url: "#榮勾斯揪的課程2"
           }
         ]
       },
