@@ -262,6 +262,7 @@ export default {
             authors: "Yu-Shan, Tsai",
             place: "Cyber Guardian Grand Challenge 2024",
             details: "Challenge based on SRv6 and using STUIX resources",
+            url: "https://github.com/Jimmy01240397/My-CTF-Challenges/tree/master/cggc-2024/SwitchRange"
           }
         ]
       },
