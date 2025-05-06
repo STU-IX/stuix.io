@@ -36,38 +36,7 @@
             <p class="authors">{{ item.authors }}</p>
             <p v-if="item.publisher" class="publisher">
               {{ item.publisher }}
-              <a
-                v-if="item.doiUrl"
-                :href="item.doiUrl"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="doi-link"
-                >{{ item.doiText }}</a
-              >
             </p>
-          </li>
-        </ul>
-      </section>
-
-      <section
-        v-if="publications.lecture && publications.lecture.length"
-        class="publication-section"
-      >
-        <h2>Lecture</h2>
-        <ul class="publication-list">
-          <li
-            v-for="(item, index) in publications.lecture"
-            :key="`lecture-${index}`"
-          >
-            <h3>
-              <a
-                :href="item.url || '#'"
-                target="_blank"
-                rel="noopener noreferrer"
-                >{{ item.title }}</a
-              >
-            </h3>
-            <p class="authors">{{ item.authors }}</p>
             <p v-if="item.conference" class="conference">
               {{ item.conference }}
             </p>
@@ -81,6 +50,56 @@
                 class="arxiv-link"
                 >{{ item.arxivText }}</a
               >
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section
+        v-if="publications.lecture && publications.lecture.length"
+        class="publication-section"
+      >
+        <h2>Lectures</h2>
+        <ul class="publication-list">
+          <li
+            v-for="(item, index) in publications.lecture"
+            :key="`lecture-${index}`"
+          >
+            <h3>
+              <a
+                :href="item.url || '#'"
+                target="_blank"
+                rel="noopener noreferrer"
+                >{{ item.title }}</a
+              >
+            </h3>
+            <p class="date">{{ item.date }}</p>
+            <p class="authors">{{ item.authors }} / {{ item.org }}</p>
+          </li>
+        </ul>
+      </section>
+
+      <section
+        v-if="publications.others && publications.others.length"
+        class="publication-section"
+      >
+        <h2>Others</h2>
+        <ul class="publication-list">
+          <li
+            v-for="(item, index) in publications.others"
+            :key="`others-${index}`"
+          >
+            <h3>
+              <a
+                :href="item.url || '#'"
+                target="_blank"
+                rel="noopener noreferrer"
+                >{{ item.title }}</a
+              >
+            </h3>
+            <p class="authors">{{ item.authors }} / {{ item.place }}</p>
+            <p v-if="item.details" class="details">
+              {{ item.details }}
             </p>
           </li>
         </ul>
@@ -146,61 +165,97 @@ export default {
       publications: {
         researchTopic: [
           {
-            title: "榮勾斯揪的皇家蜂蜜學：從 Kira Kira 到 KUSO 品嚐法",
-            authors: "國王熊熊（SKOG）, 蜜蜂侍衛長",
-            publisher: "出版：閃閃蜂窩城堡皇家出版社, 2024 年，怕的是他。",
-            url: "#榮勾斯揪的書1"
-          },
-          {
-            title: "蓋被被曬太陽：榮勾斯揪的 LKK 哲學 (安安版)",
-            authors: "榮勾（著）, 勝勝（被被提供者）",
-            publisher: "出版：懶洋洋出版社, 2023 年，你很奇欸。",
-            url: "#榮勾斯揪的書2"
-          },
-          {
-            title: "告老師！那些關於偶的 Hito 故事",
-            authors: "斯勾（口述）, 某不具名蜜蜂（筆錄）",
-            publisher: "出版：KUSO 文學社, 不詳年份，哇賽！",
-            doiText: "[je ne sais quoi]",
-            doiUrl: "#榮勾斯揪的書3_doi",
-            url: "#榮勾斯揪的書3"
+            title: "From Spoofing to Tunneling: New Red Team Networking Skills for Initial Access, Evasion and Domain Compromise",
+            authors: "Shu-Hao, Tung",
+            publisher: "Ongoing Research",
+            tags: ["Security"],
           }
         ],
         lecture: [
           {
-            title: "皇家低調奢華感的網路架構：專為國王熊熊設計",
-            authors: "榮勾斯揪, 蜜蜂網路工程大臣",
-            conference: "第一屆熊熊網際網路研討會（Binternet '24），挖哩咧！",
-            url: "#榮勾斯揪的網1"
+            title: "網路基礎",
+            authors: "Sheng-Yuan, Feng",
+            date: "2023/3/29",
+            org: "雲林斗六高中資訊研究社",
+            tags: ["BGP", "Internet", "Peering"]
           },
           {
-            title: "Zzz ～怕的是我～ Zzz：一種新型態網路睡眠協定",
-            authors: "SKOG, 粉口愛研究員A, 粉口愛研究員B",
-            details: "2024 年 3 月，醬子就很ㄅㄧㄤˋ了。",
-            arxivText: "arXiv 預印本 (LDS 版)",
-            arxivUrl: "#榮勾斯揪的網2_arxiv",
-            url: "#榮勾斯揪的網2"
+            title: "BGP 基礎與安全概念",
+            authors: "Sheng-Yuan, Feng",
+            date: "2023/4/25",
+            org: "台中明道資安社",
+            tags: ["RPKI", "IRR", "Flowspec"]
           },
           {
-            title: "蜂蜜王國的網路安全：如何防止 SPP 攻擊",
-            authors: "國王熊熊, 皇家資安蜜蜂團隊",
-            conference:
-              "Kira Kira 安全技術峰會 (KKSec '23)，ㄘㄟˊ，那些很遜的駭客。",
-            url: "#榮勾斯揪的網3"
+            title: "網路基礎月",
+            authors: "Sheng-Yuan, Feng",
+            date: "2023/8/14",
+            org: "CISCON 社群",
+            tags: ["BGP", "Internet", "Peering"]
+          },
+          {
+            title: "Network Infra Security",
+            authors: "Li-Heng, Yu",
+            date: "2023/10/29",
+            org: "SCAICT 中部高中電資社團聯合會議",
+            tags: ["Routing", "TCP/IP"]
+          },
+          {
+            title: "BGP 連線實作",
+            authors: "Sheng-Yuan, Feng",
+            date: "2024/3/3",
+            org: "北臺灣學生資訊社群、成功高中、建國中學、景美女中、中山女中共同舉辦之四校聯課",
+            tags: ["Bird2", "Prefix Filter", "Routing"]
+          },
+          {
+            title: "網路安全",
+            authors: "Sheng-Yuan, Feng",
+            date: "2024/3/27",
+            org: "新竹女中資訊研究社",
+            tags: ["BGP", "Internet", "Peering"]
+          },
+          {
+            title: "BGP 連線實作",
+            authors: "Sheng-Yuan, Feng",
+            date: "2024/3/31",
+            org: "斗六高中一日資訊體驗營雲林場",
+            tags: ["Bird2", "Prefix Filter", "Routing"]
+          },
+          {
+            title: "Intranet Security",
+            authors: "Li-Heng, Yu",
+            date: "2024/12/02",
+            org: "成大資安社",
+            tags: ["Routing", "TCP/IP"]
+          },
+          {
+            title: "Internetworking Security",
+            authors: "Li-Heng, Yu",
+            date: "2024/12/09",
+            org: "成大資安社",
+            tags: ["BGP", "Peering"]
+          },
+          {
+            title: "網路基礎",
+            authors: "Sheng-Yuan, Feng",
+            date: "2024/12/13",
+            org: "台北百齡高中科技研究社",
+            tags: ["BGP", "Internet", "Peering"]
+          },
+          {
+            title: "網路基礎",
+            authors: "Sheng-Yuan, Feng",
+            date: "2025/6/6",
+            org: "台北百齡高中科技研究社",
+            tags: ["BGP", "Internet", "Peering"]
           }
         ],
-        classes: [
+        others: [
           {
-            title: "STUIX 網路架構與設計",
-            authors: "國王熊熊, 蜜蜂網路工程大臣",
-            details: "2024 年 3 月，這堂課會讓你變得更聰明！",
-            url: "#榮勾斯揪的課程1"
-          },
-          {
-            title: "STUIX 網路安全與防護",
-            authors: "國王熊熊, 皇家資安蜜蜂團隊",
-            details: "2024 年 3 月，這堂課會讓你變得更聰明！",
-            url: "#榮勾斯揪的課程2"
+            title: "CTF Challenge: SwitchRange",
+            authors: "Yu-Shan, Tsai",
+            place: "Cyber Guardian Grand Challenge 2024",
+            details: "Challenge based on SRv6 and using STUIX resources",
           }
         ]
       },
@@ -232,6 +287,11 @@ export default {
           name: "SCINT 北臺灣學生資訊社群",
           imgSrc: "/img/pub/scint.png"
         },
+        {
+          id: "scaict",
+          name: "SCAICT 中部高中電資社團聯合會議",
+          imgSrc: "/img/pub/scaict.svg"
+        }
         {
           id: "thjcc",
           name: "THJCC CTF 臺灣高中資安聯合競賽",
@@ -336,7 +396,7 @@ $primary-blue: #007bff
       color: #555
       line-height: 1.6
       margin-bottom: 0.25rem
-      &.publisher, &.conference, &.details
+      &.publisher, &.conference, &.org, &.place, &.details, &.date
         font-size: 0.9rem
       a.doi-link, a.arxiv-link
         margin-left: 0.5em
