@@ -1,0 +1,38 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+# Project Overview
+
+## 關於本專案
+
+本專案是 **STUIX (Student & Technology United Internet Exchanges)** 的官方網站，這是一個以教育為目的的非營利性網際網路交換中心 (IX)。 STUIX 是台灣第一個以社群為基礎的 IX，成立於 2021 年 1 月。
+
+其主要目標是為台灣的網路愛好者和學習者提供一個成本更低的環境，促進技術交流並培養年輕一代參與網路營運領域。
+
+相關資訊請參考：
+- [關於我們](mdc:pages/about.vue)
+
+## 技術棧
+
+本專案主要使用 [Nuxt.js](mdc:https:/nuxtjs.org) 框架開發。
+
+## 目錄結構
+
+- `pages/`: 包含應用程式的視圖和路由。框架會讀取此目錄中所有的 `.vue` 檔案並自動產生路由設定。詳細資訊請參考 [pages/README.md](mdc:pages/README.md)。
+- `layouts/`: 包含應用程式的佈局模板。詳細資訊請參考 [layouts/README.md](mdc:layouts/README.md)。
+- `assets/`: 包含未編譯的靜態資源，如 SASS/SCSS 檔案、圖片或字型。詳細資訊請參考 [assets/README.md](mdc:assets/README.md)。
+
+## 全域狀態管理
+
+部分頁面（例如 [pages/about.vue](mdc:pages/about.vue)）會在 `mounted` 生命週期鉤子中通過 Vuex store 更新當前頁面路徑 (`page`) 和標題 (`title`)：
+```vue
+export default {
+  // ...
+  mounted() {
+    this.$store.commit('updatePage', this.page)
+    this.$store.commit('updateTitle', this.title)
+  }
+}
+```

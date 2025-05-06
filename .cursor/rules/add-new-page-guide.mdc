@@ -1,0 +1,79 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+# Guide: Adding a New Page to STUIX Website
+
+This guide outlines the steps to add a new page to the STUIX website, based on the process used for adding the `Publications` page.
+
+1.  **Create the Page File**:
+    *   In the `pages/` directory (see [pages/README.md](mdc:pages/README.md)), create a new `.vue` file for your page. For example, `pages/your-new-page.vue`.
+
+2.  **Develop Page Content**:
+    *   **Template**: Design the HTML structure within the `<template>` tags.
+    *   **Script**: Implement the page logic in the `<script>` tags.
+        *   Define `name`, `layout` (usually `'default'`).
+        *   In `data()`, define `page` (e.g., `'your-new-page'`) and `title` (e.g., `'Your New Page Title'`).
+        *   Include any other necessary data properties for your page.
+    *   **Store Update**: In the `mounted()` lifecycle hook, commit updates to the Vuex store:
+        ```vue
+        export default {
+          // ... other options ...
+          data() {
+            return {
+              page: 'your-new-page', // Lowercase, hyphenated if needed
+              title: 'Your Page Title', // Human-readable title
+              // ... other data ...
+            };
+          },
+          mounted() {
+            if (this.$store) {
+              this.$store.commit('updatePage', this.page);
+              this.$store.commit('updateTitle', this.title);
+            }
+          }
+        }
+        ```
+        Refer to how [pages/about.vue](mdc:pages/about.vue) or [pages/publications.vue](mdc:pages/publications.vue) handle this.
+    *   **Meta Tags**: In the `head()` method, set the page title and meta description for SEO and browser tab display:
+        ```vue
+        export default {
+          // ... other options ...
+          head() {
+            return {
+              title: `${this.title} - STUIX`,
+              meta: [
+                { hid: 'description', name: 'description', content: 'Your page description here.' }
+              ]
+            };
+          }
+        }
+        ```
+    *   **Styles**: Add page-specific styles within `<style lang="sass" scoped>` tags. Refer to [assets/index.sass](mdc:assets/index.sass) for global styles and variables.
+
+3.  **Update Navigation Menus**:
+    *   Add a link to your new page in the navigation items array in `layouts/default.vue` ([layouts/default.vue](mdc:layouts/default.vue)):
+        ```javascript
+        // Inside data() { return { items: [ ... ] } }
+        {
+          title: "Your Page Title", // As it should appear in the menu
+          to: "/your-new-page/"
+        }
+        ```
+    *   Similarly, update the navigation items in `layouts/win95.vue` ([layouts/win95.vue](mdc:layouts/win95.vue)) to include the new page for the Windows 95 theme.
+
+4.  **Windows 95 Theme Consideration**:
+    *   If your page requires specific styling adjustments for the Windows 95 theme, add corresponding CSS rules within its `<style>` block, targeting `body.win95theme` or using `:global(body.win95theme .your-page-class)` if needed for scoped styles.
+    *   Example from [pages/publications.vue](mdc:pages/publications.vue):
+        ```sass
+        // Windows 95 theme adjustments
+        :global(body.win95theme .publications-page)
+          // ... W95 specific styles ...
+        ```
+
+5.  **Testing**:
+    *   Thoroughly test the new page in both the default and Windows 95 themes.
+    *   Check navigation links, page titles, meta tags, and responsiveness.
+
+This process ensures consistency with the existing project structure and global state management.

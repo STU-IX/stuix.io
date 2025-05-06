@@ -1,0 +1,41 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+# Style and Layout Guide
+
+## 樣式指南
+
+本專案使用 SASS 進行樣式管理。主要的樣式定義在 [assets/index.sass](mdc:assets/index.sass)。
+
+### 主要樣式特點：
+- **字體**: 主要使用 `Lato`，並包含一系列備用字體。
+- **佈局**: `.app` class 用於設定 flex 佈局，使頁面內容 (`#content`) 可以填滿可用空間。
+- **容器**: `.container` class 用於限制內容的最大寬度為 `768px`。
+- **表單控制項**: 對於非 `win95theme` 主題下的輸入框 (`.input-group`, `.form-control`) 有特定的樣式，包括內邊距、最小高度和背景色。
+
+## 佈局 (Layouts)
+
+專案中定義了以下佈局，存放在 `layouts/` 目錄下：
+
+- **`default.vue`**: [layouts/default.vue](mdc:layouts/default.vue) 是預設的應用程式佈局。它包含了觸發 Windows 95 風格的 Konami Code 邏輯 (位於此檔案的 `konami()` 方法中)。
+- **`win95.vue`**: [layouts/win95.vue](mdc:layouts/win95.vue) 提供一個 Windows 95 風格的特殊佈局。此風格由 `layouts/default.vue` 中的 Konami Code 觸發後，相關頁面可能會使用此佈局，或者由 `layouts/default.vue` 動態修改樣式以達到類似效果。使用者觸發 Konami Code 後會被導向到 [pages/konami.vue](mdc:pages/konami.vue)。
+- **`error.vue`**: [layouts/error.vue](mdc:layouts/error.vue) 用於顯示錯誤頁面。
+
+頁面可以通過以下方式指定其佈局（如此處 [pages/about.vue](mdc:pages/about.vue) 所示）：
+```vue
+export default {
+  layout: ({ layout }) => layout, // 或者直接指定 'default', 'win95' 等
+  // ...
+}
+```
+
+## README 參考
+- [layouts/README.md](mdc:layouts/README.md)
+- [assets/README.md](mdc:assets/README.md)
+
+## 自訂指令提醒
+- `framer-motion` 已更名為 `motion/react`。
+- Commit messages 請使用英文，並遵循 `feat:`, `fix:` 等前綴慣例。
+

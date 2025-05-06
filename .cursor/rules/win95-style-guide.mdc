@@ -1,0 +1,46 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+# Windows 95 樣式指南
+
+本專案包含一個特殊的 Windows 95 風格主題，可以透過 Konami Code 啟用。以下是如何在專案中應用和客製化此風格的指南。
+
+## 啟用方式
+
+-   **Konami Code**: Win95 風格主要由位於 [layouts/default.vue](mdc:layouts/default.vue) 中的 `konami()` 方法觸發。
+-   **`body` Class**: 成功觸發後，`win95theme` class 會被加到 `<body>` 元素上。
+-   **導向**: 使用者觸發 Konami Code 後會被導向到 [pages/konami.vue](mdc:pages/konami.vue)。
+
+## 專用佈局
+
+-   存在一個專為 Win95 風格設計的佈局：[layouts/win95.vue](mdc:layouts/win95.vue)。部分頁面在 Win95 模式下可能會使用此佈局。
+-   或者，[layouts/default.vue](mdc:layouts/default.vue) 也可能動態修改現有頁面的樣式以達到類似 Win95 的外觀。
+
+## 元件樣式客製化
+
+ **SASS/SCSS 巢狀結構 (`.win95 &`)**:
+  這是建議的作法，可以在元件自身的 `<style>` 區塊中定義 Win95 特有的樣式。
+  當 `body.win95theme` 存在時，`.win95` class 通常會被添加到相關的父層元素上 (例如 `Nuxt` component in `layouts/default.vue`)，從而啟用這些巢狀樣式。
+
+  範例 ([pages/members.vue](mdc:pages/members.vue) 中的 `.tag`):
+  ```scss
+  .tag
+      // 基本樣式...
+      .win95 &
+          // Win95 特有樣式...
+          border-radius: 0
+          background-color: navy
+  ```
+
+
+## 重要檔案參考
+
+-   [layouts/default.vue](mdc:layouts/default.vue): Konami Code 邏輯和 `win95theme` class 的切換。
+-   [layouts/win95.vue](mdc:layouts/win95.vue): Win95 專用佈局。
+-   [pages/members.vue](mdc:pages/members.vue): `.win95 &` 使用範例。
+-   [pages/publications.vue](mdc:pages/publications.vue): `.win95 &` 和 `:global` 選擇器使用範例。
+-   [pages/konami.vue](mdc:pages/konami.vue): 觸發 Konami Code 後的目標頁面。
+
+請在為元件添加或修改 Win95 樣式時參考本指南。
