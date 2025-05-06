@@ -343,9 +343,4 @@ $primary-blue: #007bff
     .partner-name
       color: #000000
       background-color: transparent
-
-@media (max-width: 768px)
-  .research-partner-container
-    // All previous commented lines inside this block are to be removed.
-    // This block might become empty if no other rules exist.
 </style>
