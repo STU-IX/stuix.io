@@ -90,6 +90,10 @@ export default {
         {
           title: "Technical Guide",
           to: "/technical-guide/"
+        },
+        {
+          title: "Publications",
+          to: "/publications/"
         }
       ]
     };
