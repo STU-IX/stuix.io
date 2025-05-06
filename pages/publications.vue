@@ -179,6 +179,27 @@ export default {
         ],
         lecture: [
           {
+            title: "網路安全與實作",
+            authors: "Li-Heng, Yu",
+            date: "2021/04/26",
+            org: "國立清華大學 CSST 程式設計討論會",
+            tags: ["Routing", "TCP/IP", "Security"]
+          },
+          {
+            title: "網路安全與實作 - Internetworking",
+            authors: "Li-Heng, Yu",
+            date: "2021/05/03",
+            org: "國立清華大學 CSST 程式設計討論會",
+            tags: ["BGP", "Peering", "Security", "Routing"]
+          },
+          {
+            title: "玩轉 iptables 第一次就上手",
+            authors: "Li-Heng, Yu",
+            date: "2021/12/22",
+            org: "國立清華大學 CSST 程式設計討論會",
+            tags: ["Routing", "TCP/IP"]
+          },
+          {
             title: "網路基礎",
             authors: "Sheng-Yuan, Feng",
             date: "2023/3/29",
@@ -204,7 +225,7 @@ export default {
             authors: "Li-Heng, Yu",
             date: "2023/10/29",
             org: "SCAICT 中部高中電資社團聯合會議",
-            tags: ["Routing", "TCP/IP"]
+            tags: ["Routing", "TCP/IP", "Security"]
           },
           {
             title: "BGP 連線實作",
@@ -232,14 +253,14 @@ export default {
             authors: "Li-Heng, Yu",
             date: "2024/12/02",
             org: "成大資安社",
-            tags: ["Routing", "TCP/IP"]
+            tags: ["Routing", "TCP/IP", "Security"]
           },
           {
             title: "Internetworking Security",
             authors: "Li-Heng, Yu",
             date: "2024/12/09",
             org: "成大資安社",
-            tags: ["BGP", "Peering"]
+            tags: ["BGP", "Peering", "Security", "Routing"]
           },
           {
             title: "網路基礎",
