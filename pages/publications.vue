@@ -83,9 +83,9 @@
         </ul>
       </section>
 
-      <section class="publication-section research-partners-section">
+      <section class="publication-section partners-section">
         <h2>Research Partner</h2>
-        <div v-if="researchPartners.length" class="research-partner-container">
+        <div v-if="researchPartners.length" class="partner-container">
           <div
             v-for="partner in researchPartners"
             :key="partner.id"
@@ -94,6 +94,25 @@
             <img
               :src="partner.imgSrc"
               :alt="partner.name || 'Research Partner Logo'"
+            />
+            <div v-if="partner.name" class="partner-name">
+              {{ partner.name }}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="publication-section partners-section">
+        <h2>Education Partner</h2>
+        <div v-if="educationPartners.length" class="partner-container">
+          <div
+            v-for="partner in educationPartners"
+            :key="partner.id"
+            class="partner-logo-item"
+          >
+            <img
+              :src="partner.imgSrc"
+              :alt="partner.name || 'Education Partner Logo'"
             />
             <div v-if="partner.name" class="partner-name">
               {{ partner.name }}
@@ -163,20 +182,37 @@ export default {
         ]
       },
       researchPartners: [
+        /*{
+          id: "ripe",
+          name: "RIPE NCC",
+          imgSrc: "/img/pub/ripe.png"
+        }*/
+      ],
+      educationPartners: [
         {
-          id: "skog1",
-          name: "榮勾斯揪 KUSO 研究院",
-          imgSrc: "/img/sponsor/skog.webp"
+          id: "twds",
+          name: "台灣數位串流有限公司",
+          imgSrc: "/img/pub/twds.png"
         },
         {
-          id: "skog2",
-          name: "皇家蜂蜜 Hito 實驗室",
-          imgSrc: "/img/sponsor/skog.webp"
+          id: "simpleinfo",
+          name: "簡單資訊有限公司",
+          imgSrc: "/img/pub/simple.png"
         },
         {
-          id: "skog_no_name",
-          name: "神秘的榮勾斯揪夥伴",
-          imgSrc: "/img/sponsor/skog.webp"
+          id: "ncse",
+          name: "NCSE Network 國雲網路",
+          imgSrc: "/img/pub/ncse.png"
+        },
+        {
+          id: "scint",
+          name: "SCINT 北臺灣學生資訊社群",
+          imgSrc: "/img/pub/scint.png"
+        },
+        {
+          id: "thjcc",
+          name: "THJCC CTF 臺灣高中資安聯合競賽",
+          imgSrc: "/img/pub/thjcc.png"
         }
       ]
     };
@@ -297,7 +333,7 @@ $primary-blue: #007bff
       border-bottom-color: silver
 
 
-.research-partner-container
+.partner-container
   display: grid
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
   grid-gap: 16px
