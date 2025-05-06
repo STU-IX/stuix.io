@@ -60,6 +60,18 @@
       </section>
 
       <section
+        v-if="networkUsers.length"
+        class="publication-section partners-section"
+      >
+        <h2>Providing Network Resources</h2>
+        <div class="partner-container">
+          <span v-for="user of networkUsers" :key="user" class="networkuser">
+            {{ user }}
+          </span>
+        </div>
+      </section>
+
+      <section
         v-if="publications.researchTopic && publications.researchTopic.length"
         class="publication-section"
       >
@@ -325,6 +337,31 @@ export default {
           name: "THJCC CTF 臺灣高中資安聯合競賽",
           imgSrc: "/img/pub/thjcc.png"
         }
+      ],
+      networkUsers: [
+        "2024 斗六高中舉辦之一日資訊體驗營台南場",
+        "2025 數位實中x松山高中 資訊聯合工作坊",
+        "APCS 模擬測驗團隊",
+        "竹科實中資訊研究社",
+        "臺灣跨校資安聯合社團",
+        "成功高中電子計算機研習社",
+        "明倫高中程式設計社",
+        "中大壢中資訊培訓讀書、電腦科學研究社",
+        "內壢高中資訊研究社",
+        "豐原高中資訊研究社",
+        "中部高中電資社團聯合會議",
+        "大園國際高中程式設計社",
+        "臺南一中資訊社",
+        "內湖高中資訊研究社",
+        "松山工農黑客 AI 社",
+        "永慶高中資訊研究社",
+        "成淵高中資訊研究社",
+        "竹北高中軟體研究社",
+        "建國中學電子計算機研習社 與 北一女中資訊研習社",
+        "百齡高中科技研究社",
+        "臺南高商資訊研究社",
+        "國立臺灣師範大學附屬高級中學校園網絡管理小組",
+        "桃園高中資訊安全讀書會",
       ]
     };
   },
@@ -454,6 +491,10 @@ $primary-blue: #007bff
 
   .win95 &
     background-color: transparent
+
+  .networkuser
+    background-color: transparent
+    border: 1px solid rgba(0, 0, 0, 0.05)
 
 .partner-logo-item
   background-color: rgba(0, 0, 0, 0.05)
