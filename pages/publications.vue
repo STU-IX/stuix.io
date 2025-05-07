@@ -180,7 +180,7 @@ export default {
   layout: ({ layout }) => layout,
   data() {
     return {
-      page: "publications",
+      page: "/publications/",
       title: "Publications",
       addPublicationUrl:
         "https://github.com/stuix/website/issues/new?assignees=&labels=publication&template=add-publication.md&title=Add+Publication%3A+%5BYour+Publication+Title%5D",
