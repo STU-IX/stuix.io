@@ -113,6 +113,11 @@
                 >{{ item.arxivText }}</a
               >
             </p>
+            <div v-if="item.tags && item.tags.length" class="publication-tags">
+              <span v-for="tag in item.tags" :key="tag" class="tag-item">{{
+                tag
+              }}</span>
+            </div>
           </li>
         </ul>
       </section>
@@ -139,6 +144,11 @@
             </h3>
             <p class="date">{{ item.date }}</p>
             <p class="authors">{{ item.authors }} / {{ item.org }}</p>
+            <div v-if="item.tags && item.tags.length" class="publication-tags">
+              <span v-for="tag in item.tags" :key="tag" class="tag-item">{{
+                tag
+              }}</span>
+            </div>
           </li>
         </ul>
       </section>
@@ -167,6 +177,11 @@
             <p v-if="item.details" class="details">
               {{ item.details }}
             </p>
+            <div v-if="item.tags && item.tags.length" class="publication-tags">
+              <span v-for="tag in item.tags" :key="tag" class="tag-item">{{
+                tag
+              }}</span>
+            </div>
           </li>
         </ul>
       </section>
@@ -507,6 +522,32 @@ $text-color-muted: #6c757d
         color: $text-color-muted // Muted color for secondary info
       a.doi-link, a.arxiv-link
         margin-left: 0.5em
+
+.publication-tags
+  margin-top: 1rem
+  .tag-item
+    display: inline-block
+    background-color: lighten($primary-blue, 45%) // Lighter blue for tags
+    color: darken($primary-blue, 10%)         // Darker blue text for contrast
+    padding: 0.3em 0.7em
+    border-radius: 4px
+    font-size: 0.8rem
+    margin-right: 0.5em
+    margin-bottom: 0.5em // Add some space if tags wrap
+    border: 1px solid lighten($primary-blue, 35%)
+    font-weight: 500
+
+    .win95 &
+      background-color: navy // W95 classic blue
+      color: white
+      border-radius: 0
+      border: 1px solid
+      border-top-color: silver
+      border-left-color: silver
+      border-right-color: black
+      border-bottom-color: black
+      padding: 0.2em 0.5em
+      font-weight: normal
 
 // Responsive adjustments
 @media (max-width: 768px)
