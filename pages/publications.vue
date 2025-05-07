@@ -535,9 +535,9 @@ $text-color-muted: #6c757d
   display: flex
   flex-direction: column
   align-items: center
-  justify-content: space-between
   text-align: center
-  box-shadow: 0 2px 4px rgba(0,0,0,0.03) // Very subtle shadow
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03)
+  letter-spacing: -0.05em
 
   img
     width: 80%
