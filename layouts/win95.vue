@@ -32,13 +32,15 @@
 </template>
 <style lang="sass">
 @font-face
-	font-family: zpix
-	src: url('/zpix.woff2'),url('/zpix.ttf')
+	font-family: pixel
+	src: url('/fusion-pixel-12px-proportional-zh_hant.woff2')
 body.win95theme
 	background: url('/img/bg.jpg')
 	background-size: 256px
+.window
+	font-family: 'pixel','Times New Roman', Times, '新細明體', 'Noto Sans TC', serif !important
 .win95
-	font-family: 'zpix','Times New Roman', Times, '新細明體', 'Noto Sans TC', serif
+	font-family: 'pixel','Times New Roman', Times, '新細明體', 'Noto Sans TC', serif
 	max-width: 768px
 	margin: 0 auto
 	hr
