@@ -61,11 +61,15 @@
 
       <section
         v-if="networkUsers.length"
-        class="publication-section partners-section"
+        class="publication-section network-users-section"
       >
         <h2>Providing Network Resources</h2>
-        <div class="partner-container">
-          <span v-for="user of networkUsers" :key="user" class="networkuser">
+        <div class="network-user-list">
+          <span
+            v-for="user of networkUsers"
+            :key="user"
+            class="networkuser-tag"
+          >
             {{ user }}
           </span>
         </div>
@@ -83,11 +87,13 @@
           >
             <h3>
               <a
-                :href="item.url || '#'"
+                v-if="item.url"
+                :href="item.url"
                 target="_blank"
                 rel="noopener noreferrer"
                 >{{ item.title }}</a
               >
+              <span v-else>{{ item.title }}</span>
             </h3>
             <p class="authors">{{ item.authors }}</p>
             <p v-if="item.publisher" class="publisher">
@@ -123,11 +129,13 @@
           >
             <h3>
               <a
-                :href="item.url || '#'"
+                v-if="item.url"
+                :href="item.url"
                 target="_blank"
                 rel="noopener noreferrer"
                 >{{ item.title }}</a
               >
+              <span v-else>{{ item.title }}</span>
             </h3>
             <p class="date">{{ item.date }}</p>
             <p class="authors">{{ item.authors }} / {{ item.org }}</p>
@@ -147,11 +155,13 @@
           >
             <h3>
               <a
-                :href="item.url || '#'"
+                v-if="item.url"
+                :href="item.url"
                 target="_blank"
                 rel="noopener noreferrer"
                 >{{ item.title }}</a
               >
+              <span v-else>{{ item.title }}</span>
             </h3>
             <p class="authors">{{ item.authors }} / {{ item.place }}</p>
             <p v-if="item.details" class="details">
@@ -177,13 +187,15 @@ export default {
       publications: {
         researchTopic: [
           {
-            title: "From Spoofing to Tunneling: New Red Team Networking Skills for Initial Access, Evasion and Domain Compromise",
+            title:
+              "From Spoofing to Tunneling: New Red Team Networking Skills for Initial Access, Evasion and Domain Compromise",
             authors: "Shu-Hao, Tung",
             publisher: "Ongoing Research",
             tags: ["Security", "Tunneling"]
           },
           {
-            title: "從 Segment Routing 往回看，Tunnel Injection 一招讓你內網看光光",
+            title:
+              "從 Segment Routing 往回看，Tunnel Injection 一招讓你內網看光光",
             authors: "Yu-Shan, Tsai",
             publisher: "Ongoing Research",
             tags: ["Security", "Tunneling"]
@@ -243,7 +255,8 @@ export default {
             title: "BGP 連線實作",
             authors: "Sheng-Yuan, Feng",
             date: "2024/3/3",
-            org: "北臺灣學生資訊社群、成功高中、建國中學、景美女中、中山女中共同舉辦之四校聯課",
+            org:
+              "北臺灣學生資訊社群、成功高中、建國中學、景美女中、中山女中共同舉辦之四校聯課",
             tags: ["Bird2", "Prefix Filter", "Routing"]
           },
           {
@@ -295,7 +308,8 @@ export default {
             authors: "Yu-Shan, Tsai",
             place: "Cyber Guardian Grand Challenge 2024",
             details: "Challenge based on SRv6 and using STUIX resources",
-            url: "https://github.com/Jimmy01240397/My-CTF-Challenges/tree/master/cggc-2024/SwitchRange"
+            url:
+              "https://github.com/Jimmy01240397/My-CTF-Challenges/tree/master/cggc-2024/SwitchRange"
           }
         ]
       },
@@ -361,7 +375,7 @@ export default {
         "百齡高中科技研究社",
         "臺南高商資訊研究社",
         "國立臺灣師範大學附屬高級中學校園網絡管理小組",
-        "桃園高中資訊安全讀書會",
+        "桃園高中資訊安全讀書會"
       ]
     };
   },
@@ -389,30 +403,42 @@ export default {
 
 <style lang="sass" scoped>
 $primary-blue: #007bff
+$light-gray-bg: #f8f9fa // For subtle backgrounds
+$border-color: #e9ecef  // Soft border color
+$text-color-main: #343a40
+$text-color-muted: #6c757d
 
 .publications-page
-  padding-bottom: 4rem
-
+  padding-bottom: 5rem // Increased padding
+  margin-top: -1rem
+  .win95 &
+    padding-top: 0
+    margin-top: 0
 .sub-title
   text-align: center
-  font-size: 1.5rem
+  font-size: 1.4rem // Adjusted size
+  font-weight: 300 // Lighter weight for elegance
+  color: $text-color-muted
   margin-top: -1rem
-  margin-bottom: 1.5rem
+  margin-bottom: 3rem // Increased bottom margin
   text-wrap: balance
 
   .win95 &
-    margin-top: 1rem
+    margin-top: 0
     text-align: left
+    font-weight: normal // Win95 usually has normal weight
+    color: black // Standard Win95 text color
 
 .pub-layout
   // Specific styling for the "Missing a publication..." link
   > p:first-child
     text-align: center
-    margin-bottom: 2rem
+    margin-bottom: 3rem // Increased spacing
     margin-top: -1rem
 
     .win95 &
       text-align: left
+      margin-top: -3rem
 
   > p > a
     color: $primary-blue
@@ -422,35 +448,50 @@ $primary-blue: #007bff
     align-items: center
     &:hover
       text-decoration: underline
+    .win95 &
+      color: blue // Standard W95 link blue
 
-    .external-icon
-      display: inline-block
-      width: 1em
-      height: 1em
-      margin-left: 0.3em
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z'/%3E%3C/svg%3E")
-      background-repeat: no-repeat
-      background-size: contain
-      vertical-align: middle
+  .external-icon
+    display: inline-block
+    width: 1em
+    height: 1em
+    margin-left: 0.3em
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z'/%3E%3C/svg%3E")
+    background-repeat: no-repeat
+    background-size: contain
+    vertical-align: middle
 
 .publication-section
-  margin-bottom: 2.5rem
+  margin-bottom: 3rem // Increased spacing
   h2
-    font-size: 2rem
-    font-weight: bold
-    margin-bottom: 1.5rem
+    font-size: 1.9rem // Adjusted size
+    font-weight: 600 // Clearer section titles
+    margin-bottom: 1.75rem // Adjusted spacing
     padding-bottom: 0.75rem
-    border-bottom: 1px solid #e0e0e0
+    border-bottom: 2px solid $border-color // Softer border
+    .win95 &
+      border-bottom-color: silver // W95 standard border
+      font-weight: bold // W95 standard bold
 
 .publication-list
   list-style: none
   padding-left: 0
   li
     margin-bottom: 2rem
+    padding: 1.5rem
+    border: 1px solid $border-color
+    border-radius: 8px // Rounded corners for modern look
+    background-color: #fff // Cleaner background
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05) // Subtle shadow for depth
+    .win95 &
+      background-color: #c0c0c0
+      border: none
+      border-radius: 0
+      box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a
     h3
-      font-size: 1.25rem
-      font-weight: bold
-      margin-bottom: 0.3rem
+      font-size: 1.2rem // Adjusted for better hierarchy
+      font-weight: 600
+      margin-bottom: 0.5rem // Spacing
       a
         color: $primary-blue
         text-decoration: none
@@ -458,11 +499,12 @@ $primary-blue: #007bff
           text-decoration: underline
     p
       font-size: 0.95rem
-      color: #555
+      color: $text-color-main // Main text color
       line-height: 1.6
-      margin-bottom: 0.25rem
+      margin-bottom: 0.3rem
       &.publisher, &.conference, &.org, &.place, &.details, &.date
-        font-size: 0.9rem
+        font-size: 0.88rem
+        color: $text-color-muted // Muted color for secondary info
       a.doi-link, a.arxiv-link
         margin-left: 0.5em
 
@@ -470,66 +512,98 @@ $primary-blue: #007bff
 @media (max-width: 768px)
   .publication-section:first-of-type
     margin-top: 2rem
+  .sub-title
+    font-size: 1.2rem // Adjust for smaller screens
 
 // Windows 95 theme adjustments
-:global(body.win95theme .publications-page)
-  .pub-layout
-    > p > a
-      color: blue
-
-  .publication-section
-    h2
-      border-bottom-color: silver
-
-
 .partner-container
   display: grid
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
-  grid-gap: 16px
+  grid-gap: 24px // Increased gap
   margin-top: 1rem
   margin-bottom: 16px
 
   .win95 &
     background-color: transparent
-
-  .networkuser
-    background-color: transparent
-    border: 1px solid rgba(0, 0, 0, 0.05)
+    grid-gap: 16px // W95 might prefer tighter spacing
 
 .partner-logo-item
-  background-color: rgba(0, 0, 0, 0.05)
-  border-radius: 4px
-  padding: 8px 4px
+  background-color: #fff // White background for logos
+  border: 1px solid $border-color // Soft border
+  border-radius: 8px // Rounded corners
+  padding: 16px 8px
   display: flex
   flex-direction: column
   align-items: center
   justify-content: space-between
   text-align: center
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03) // Very subtle shadow
 
   img
-    width: 75%
-    aspect-ratio: 3/1
+    width: 80%
+    height: 60px
+    aspect-ratio: auto // Let height and object-fit control
     object-fit: contain
     object-position: center
-    margin: 15px 0
+    margin: 10px 0 15px 0 // Adjusted margin
 
   .partner-name
     font-size: 0.85rem
-    color: #333
+    color: $text-color-main
     padding: 4px
-    line-height: 1.2
+    line-height: 1.3 // Improved line height
     width: 100%
 
   .win95 &
-    background: #fff
+    background: #c0c0c0 // Silver for W95
     border-radius: 0
     box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a
     padding: 8px 4px
+    border: none // Use box-shadow for W95 border effect
 
     img
       margin: 15px 0
+      width: 75% // Revert to original W95 spec if it was better
 
     .partner-name
       color: #000000
       background-color: transparent
+
+// Styling for the new "Providing Network Resources" section
+.network-users-section // Targets the whole section if needed for spacing etc.
+  .network-user-list
+    display: flex
+    flex-wrap: wrap
+    gap: 10px 12px // Row and column gap for tags
+    margin-top: 1rem
+
+  .networkuser-tag
+    background-color: $light-gray-bg // Light background for tags
+    color: $text-color-main
+    padding: 0.5em 0.9em // More padding
+    border-radius: 6px // Slightly more rounded
+    font-size: 0.9rem
+    line-height: 1.4
+    border: 1px solid $border-color
+    transition: background-color 0.2s, border-color 0.2s // Smooth transition
+
+    &:hover
+      background-color: darken($light-gray-bg, 5%) // Darken on hover
+      border-color: darken($border-color, 10%)
+
+    .win95 & // Win95 specific styling for these tags
+      background-color: #c0c0c0 // Silver
+      border: 1px solid
+      border-top-color: #fff
+      border-left-color: #fff
+      border-right-color: #0a0a0a
+      border-bottom-color: #0a0a0a
+      border-radius: 0
+      color: black
+      padding: 0.4em 0.7em // Adjusted W95 padding
+      font-size: 0.9rem
+      margin: 2px // Minimal margin for W95
+      transition: none // No transitions for W95
+      &:hover
+        background-color: #b0b0b0 // Simple hover for W95
 </style>
