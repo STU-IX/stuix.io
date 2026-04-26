@@ -99,13 +99,6 @@
         </div>
       </div>
       <div class="sponsor">
-        <img src="/img/sponsor/cute_panda.png" />
-        <div class="name">
-          <div class="en">Cute_Panda</div>
-          <!-- <div class="zh" style="opicity: 0">_</div> -->
-        </div>
-      </div>
-      <div class="sponsor">
         <img src="/img/sponsor/simple.png" />
         <div class="name">
           <div class="en">Simple Information, Inc.</div>
