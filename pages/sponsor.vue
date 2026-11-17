@@ -46,13 +46,6 @@
         </div>
       </div>
       <div class="sponsor">
-        <img src="/img/sponsor/eons.png" />
-        <div class="name">
-          <div class="en">Eons Data Communications Limited</div>
-          <div class="zh">億安數據通信有限公司</div>
-        </div>
-      </div>
-      <div class="sponsor">
         <img src="/img/sponsor/Akari.png" />
         <div class="name">
           <div class="en">Akari Networks Limited</div>
