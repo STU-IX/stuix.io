@@ -4,8 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
+    "test": "node --test tests/*.test.js",
+    "validate:members": "node scripts/members.js validate",
+    "prebuild": "npm run validate:members",
     "build": "nuxt build",
     "start": "nuxt start",
+    "pregenerate": "npm run validate:members",
     "generate": "nuxt generate"
   },
   "dependencies": {
